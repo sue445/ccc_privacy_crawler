@@ -22,12 +22,14 @@ RSpec.describe Company do
   end
 
   describe "#notify_to_twitter" do
-    subject{ company.notify_to_twitter }
+    let(:company){ create(:company) }
 
-    let(:company){ create(:example_company) }
-
-    it "should not occurred error" do
-      subject
+    it "should post tweet" do
+      begin
+        company.notify_to_twitter
+      rescue Twitter::Error => e
+        puts e.message
+      end
     end
   end
 end

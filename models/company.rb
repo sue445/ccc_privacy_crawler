@@ -29,8 +29,6 @@ class Company < ActiveRecord::Base
 
   def notify_to_twitter
     client.update("T-CARDの個人情報提供先に「#{company_name}」が追加されました(#{receipted_date}付)")
-  rescue Twitter::Error => e
-    Padrino.logger.error e.message
   end
 
   private
