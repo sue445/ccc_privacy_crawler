@@ -2,8 +2,8 @@ RACK_ENV = 'test' unless defined?(RACK_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
 Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&method(:require))
 
+require 'database_rewinder'
 require 'rspec/its'
-
 require 'factory_girl'
 
 # cf. https://github.com/thoughtbot/factory_girl/wiki/Installation#padrino-installation
@@ -95,6 +95,16 @@ RSpec.configure do |config|
 
   config.include Rack::Test::Methods
   config.include FactoryGirl::Syntax::Methods
+
+  config.before :suite do
+    DatabaseRewinder.clean_all
+    # or
+    # DatabaseRewinder.clean_with :any_arg_that_would_be_actually_ignored_anyway
+  end
+
+  config.after :each do
+    DatabaseRewinder.clean
+  end
 end
 
 # You can use this method to custom specify a Rack app

@@ -16,4 +16,14 @@
 #
 
 class Company < ActiveRecord::Base
+  def self.import_new_companies(companies)
+    new_companies = []
+    companies.each do |company|
+      next if Company.exists?(no: company.no)
+
+      company.save!
+      new_companies << company
+    end
+    new_companies
+  end
 end
