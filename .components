@@ -6,4 +6,4 @@
 :renderer: slim
 :stylesheet: none
 :namespace: CccPrivacyCrawler
-:migration_format: number
+:migration_format: timestamp
