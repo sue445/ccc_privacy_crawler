@@ -8,6 +8,19 @@ class PdfCrawlWorker
     # TODO notify
   end
 
+  def download_ccc_pdf(dest_pdf_file)
+    agent = Mechanize.new
+    agent.get("http://qa.tsite.jp/faq/show/25129")
+
+    download_link = agent.page.link_with(href: %r(/attachment_file/.+\.pdf))
+    raise "Not found download_link" unless download_link
+
+    pdf_content = agent.get_file(download_link.href)
+    File.open(dest_pdf_file, "wb") do |file|
+      file.write(pdf_content)
+    end
+  end
+
   def parse_ccc_pdf(pdf_file)
     companies = []
     read_pdf(pdf_file).each_line do |line|

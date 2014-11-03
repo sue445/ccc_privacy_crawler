@@ -4,6 +4,7 @@ Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&
 
 require 'database_rewinder'
 require 'rspec/its'
+require 'rspec/temp_dir'
 require 'factory_girl'
 
 # cf. https://github.com/thoughtbot/factory_girl/wiki/Installation#padrino-installation
