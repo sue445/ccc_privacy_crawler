@@ -9,6 +9,7 @@ gem 'rake'
 gem 'slim'
 
 group :development do
+  gem 'annotate'
   gem 'sqlite3', group: :test
 end
 
