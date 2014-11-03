@@ -1,6 +1,13 @@
 require 'pdf/reader'
 
 class PdfCrawlWorker
+  def perform
+    # TODO download pdf
+    # TODO parse pdf
+    # TODO import to DB
+    # TODO notify
+  end
+
   def parse_ccc_pdf(pdf_file)
     companies = []
     read_pdf(pdf_file).each_line do |line|

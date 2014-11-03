@@ -15,6 +15,8 @@ group :development do
 end
 
 group :test do
+  gem 'database_rewinder'
+  gem 'factory_girl'
   gem 'rspec'
   gem 'rspec-its'
   gem 'rack-test', require: 'rack/test'

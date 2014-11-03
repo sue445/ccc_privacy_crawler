@@ -14,12 +14,14 @@
 ActiveRecord::Schema.define(version: 20141103085818) do
 
   create_table "companies", force: true do |t|
-    t.integer  "no"
-    t.string   "company_name"
-    t.string   "receipted_date"
+    t.integer  "no",               null: false
+    t.string   "company_name",     null: false
+    t.string   "receipted_date",   null: false
     t.text     "destination_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "companies", ["no"], name: "index_companies_on_no", unique: true
 
 end
