@@ -14,6 +14,8 @@ gem 'twitter'
 group :development do
   gem 'annotate'
   gem 'dotenv' , group: :test
+  gem 'pry'    , group: :test
+  gem 'pry-nav', group: :test
   gem 'sqlite3', group: :test
 end
 
