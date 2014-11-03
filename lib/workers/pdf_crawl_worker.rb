@@ -1,5 +1,3 @@
-require 'pdf/reader'
-
 class PdfCrawlWorker
   def perform
     # TODO download pdf
