@@ -15,21 +15,30 @@ GEM
       minitest (~> 5.1)
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
+    addressable (2.3.6)
     afm (0.2.2)
     annotate (2.6.5)
       activerecord (>= 2.3.0)
       rake (>= 0.8.7)
     arel (5.0.1.20140414130214)
+    buftok (0.2.0)
     builder (3.2.2)
     database_rewinder (0.4.1)
     diff-lcs (1.2.5)
     domain_name (0.5.22)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (1.0.2)
+    equalizer (0.0.9)
     factory_girl (4.5.0)
       activesupport (>= 3.0.0)
+    faraday (0.9.0)
+      multipart-post (>= 1.2, < 3)
     hashery (2.1.1)
+    http (0.6.2)
+      http_parser.rb (~> 0.6.0)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
+    http_parser.rb (0.6.0)
     http_router (0.11.1)
       rack (>= 1.0.0)
       url_mount (~> 0.2.1)
@@ -47,10 +56,14 @@ GEM
       nokogiri (~> 1.4)
       ntlm-http (~> 0.1, >= 0.1.1)
       webrobots (>= 0.0.9, < 0.2)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
     mime-types (1.25.1)
     mini_portile (0.6.0)
     minitest (5.4.2)
     moneta (0.7.20)
+    multipart-post (2.0.0)
+    naught (1.0.0)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     nokogiri (1.6.3.1)
@@ -122,6 +135,7 @@ GEM
     rspec-temp_dir (0.0.3)
       rspec
     ruby-rc4 (0.1.5)
+    simple_oauth (0.3.0)
     sinatra (1.4.5)
       rack (~> 1.4)
       rack-protection (~> 1.4)
@@ -138,6 +152,17 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     ttfunk (1.4.0)
+    twitter (5.12.0)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.9)
+      faraday (~> 0.9.0)
+      http (~> 0.6.0)
+      http_parser.rb (~> 0.6.0)
+      json (~> 1.8)
+      memoizable (~> 0.4.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
     tzinfo (1.2.2)
       thread_safe (~> 0.1)
     unf (0.1.4)
@@ -154,6 +179,7 @@ DEPENDENCIES
   activerecord (>= 3.1)
   annotate
   database_rewinder
+  dotenv
   factory_girl
   mechanize
   padrino (= 0.12.4)
@@ -166,3 +192,4 @@ DEPENDENCIES
   rspec-temp_dir
   slim
   sqlite3
+  twitter

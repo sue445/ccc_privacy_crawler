@@ -9,9 +9,11 @@ gem 'mechanize'
 gem 'pdf-reader'
 gem 'rake'
 gem 'slim'
+gem 'twitter'
 
 group :development do
   gem 'annotate'
+  gem 'dotenv' , group: :test
   gem 'sqlite3', group: :test
 end
 

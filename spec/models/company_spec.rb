@@ -20,4 +20,16 @@ RSpec.describe Company do
       its(:count){ should eq 2 }
     end
   end
+
+  describe "#notify_to_twitter" do
+    let(:company){ create(:company) }
+
+    it "should post tweet" do
+      begin
+        company.notify_to_twitter
+      rescue Twitter::Error => e
+        puts e.message
+      end
+    end
+  end
 end
