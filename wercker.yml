@@ -3,8 +3,8 @@ box: wercker/rvm
 # See the Rails section on the wercker devcenter:
 # http://devcenter.wercker.com/articles/languages/ruby/settingup-rails4.html
 # You will want to define your database as follows:
-services:
-   - wercker/postgresql
+#services:
+#   - wercker/postgresql
 # See more about services on our devcenter:
 # http://devcenter.wercker.com/articles/services/
 build:
@@ -33,7 +33,7 @@ build:
         - script:
             name: Setup configurations
             code: |
-                cp config/database.yml{.postgresql,}
+                cp config/database.yml{.example,}
                 RACK_ENV=test bundle exec rake ar:migrate:reset
 
         - script:

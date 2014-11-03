@@ -5,7 +5,7 @@
 
 ## Setup
 ```bash
-cp config/database.yml{.sqlite3,}
+cp config/database.yml{.example,}
 vi config/database.yml
 
 bundle install

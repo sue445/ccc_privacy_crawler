@@ -15,5 +15,5 @@ group :test do
 end
 
 group :production do
-  gem 'pg', group: :test
+  gem 'pg'
 end
