@@ -54,12 +54,9 @@ class PdfCrawlWorker
   def read_pdf(pdf_file)
     pdf_content = ""
 
-    File.open(pdf_file, "rb") do |io|
-      reader = PDF::Reader.new(io)
-
-      reader.pages.each do |page|
-        pdf_content << page.text
-      end
+    reader = PDF::Reader.new(pdf_file)
+    reader.pages.each do |page|
+      pdf_content << page.text
     end
 
     pdf_content
