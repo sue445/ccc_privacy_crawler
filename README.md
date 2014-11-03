@@ -5,9 +5,14 @@
 * Ruby 2.1.4
 
 ## Setup
+* create twitter app and generate access token
+  * https://apps.twitter.com/
+
 ```bash
 cp config/database.yml{.example,}
 vi config/database.yml
+cp .env{.example,}
+vi .env
 
 bundle install
 bundle exec padrino rake ar:create ar:migrate

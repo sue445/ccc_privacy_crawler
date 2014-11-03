@@ -9,3 +9,4 @@ db/*.db
 vendor/bundle/
 .bundle/
 config/database.yml
+.env
