@@ -1,35 +1,4 @@
-##
-# You can use other adapters like:
-#
-#   ActiveRecord::Base.configurations[:development] = {
-#     :adapter   => 'mysql2',
-#     :encoding  => 'utf8',
-#     :reconnect => true,
-#     :database  => 'your_database',
-#     :pool      => 5,
-#     :username  => 'root',
-#     :password  => '',
-#     :host      => 'localhost',
-#     :socket    => '/tmp/mysql.sock'
-#   }
-#
-ActiveRecord::Base.configurations[:development] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ccc_privacy_crawler_development.db')
-
-}
-
-ActiveRecord::Base.configurations[:production] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ccc_privacy_crawler_production.db')
-
-}
-
-ActiveRecord::Base.configurations[:test] = {
-  :adapter => 'sqlite3',
-  :database => Padrino.root('db', 'ccc_privacy_crawler_test.db')
-
-}
+ActiveRecord::Base.configurations = YAML.load(ERB.new(File.read(Padrino.root('config', 'database.yml'))).result).with_indifferent_access
 
 # Setup our logger
 ActiveRecord::Base.logger = logger

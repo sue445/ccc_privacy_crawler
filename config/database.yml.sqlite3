@@ -1,0 +1,11 @@
+development:
+  adapter: sqlite3
+  database: db/gemoire_development.db
+
+test:
+  adapter: sqlite3
+  database: db/gemoire_test.db
+
+production:
+  adapter: sqlite3
+  database: db/gemoire_production.db
