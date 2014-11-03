@@ -1,9 +1,17 @@
 class PdfCrawlWorker
   def perform
-    # TODO download pdf
-    # TODO parse pdf
-    # TODO import to DB
-    # TODO notify
+    dest_pdf_file = Padrino.root("tmp", "ccc.pdf")
+    download_ccc_pdf(dest_pdf_file)
+    companies = parse_ccc_pdf(dest_pdf_file)
+    new_companies = Company.import_new_companies(companies)
+
+    if new_companies.empty?
+      Padrino.logger.info "not found new companies"
+    else
+      new_companies.each do |company|
+        company.notify_to_twitter
+      end
+    end
   end
 
   def download_ccc_pdf(dest_pdf_file)

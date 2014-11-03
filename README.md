@@ -20,7 +20,7 @@ bundle exec padrino rake ar:create ar:migrate
 
 ## Run development
 ```bash
-bundle exec padrino start
+bundle exec padrino r "PdfCrawlWorker.new.perform"
 ```
 
 ## Test
