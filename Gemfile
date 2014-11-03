@@ -1,5 +1,7 @@
 source 'https://rubygems.org'
 
+ruby '2.1.4'
+
 gem 'activerecord', '>= 3.1', require: 'active_record'
 gem 'padrino', '0.12.4'
 gem 'rake'
