@@ -20,4 +20,14 @@ RSpec.describe Company do
       its(:count){ should eq 2 }
     end
   end
+
+  describe "#notify_to_twitter" do
+    subject{ company.notify_to_twitter }
+
+    let(:company){ create(:example_company) }
+
+    it "should not occurred error" do
+      subject
+    end
+  end
 end

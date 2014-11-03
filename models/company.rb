@@ -26,4 +26,21 @@ class Company < ActiveRecord::Base
     end
     new_companies
   end
+
+  def notify_to_twitter
+    client.update("T-CARDの個人情報提供先に「#{company_name}」が追加されました(#{receipted_date}付)")
+  rescue Twitter::Error => e
+    Padrino.logger.error e.message
+  end
+
+  private
+
+  def client
+    Twitter::REST::Client.new do |config|
+      config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
+      config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
+      config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
+      config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
+    end
+  end
 end
