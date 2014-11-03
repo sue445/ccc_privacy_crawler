@@ -41,6 +41,7 @@ end
 # Add your after (RE)load hooks here
 #
 Padrino.after_load do
+  Dotenv.load unless Padrino.env == :production
 end
 
 Padrino.load!

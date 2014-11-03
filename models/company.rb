@@ -28,7 +28,7 @@ class Company < ActiveRecord::Base
   end
 
   def notify_to_twitter
-    client.update("T-CARDの個人情報提供先に「#{company_name}」が追加されました(#{receipted_date}付)")
+    client.update("T-CARDの個人情報提供先に No.#{no}「#{company_name}」が追加されました(#{receipted_date}付)")
   end
 
   private
