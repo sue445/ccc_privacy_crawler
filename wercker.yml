@@ -5,6 +5,8 @@ box: wercker/rvm
 # You will want to define your database as follows:
 #services:
 #   - wercker/postgresql
+services:
+  - wercker/redis@1.0.1
 # See more about services on our devcenter:
 # http://devcenter.wercker.com/articles/services/
 build:
@@ -33,6 +35,7 @@ build:
         - script:
             name: Setup configurations
             code: |
+                export REDIS_PROVIDER=WERCKER_REDIS_URL
                 cp config/database.yml{.example,}
                 RACK_ENV=test bundle exec rake ar:migrate:reset
 

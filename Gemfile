@@ -8,12 +8,15 @@ gem 'activerecord', '>= 3.1', require: 'active_record'
 gem 'mechanize'
 gem 'pdf-reader'
 gem 'rake'
+gem 'sidekiq'
+gem 'sidekiq-cron'
 gem 'slim'
 gem 'twitter'
 
 group :development do
   gem 'annotate'
   gem 'dotenv' , group: :test
+  gem 'foreman'
   gem 'pry'    , group: :test
   gem 'pry-nav', group: :test
   gem 'sqlite3', group: :test
