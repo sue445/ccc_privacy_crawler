@@ -8,6 +8,7 @@ gem 'activerecord', '>= 3.1', require: 'active_record'
 gem 'mechanize'
 gem 'pdf-reader'
 gem 'rake'
+gem 'sidekiq'
 gem 'slim'
 gem 'twitter'
 
