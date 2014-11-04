@@ -13,6 +13,7 @@ class PdfCrawlWorker
       new_companies.each do |company|
         company.notify_to_twitter
       end
+      Padrino.logger.info "Add #{new_companies.count} companies"
     end
   end
 
