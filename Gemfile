@@ -9,6 +9,7 @@ gem 'mechanize'
 gem 'pdf-reader'
 gem 'rake'
 gem 'sidekiq'
+gem 'sidekiq-cron'
 gem 'slim'
 gem 'twitter'
 
