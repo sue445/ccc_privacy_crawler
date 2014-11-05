@@ -37,13 +37,13 @@ Padrino::Logger::Config[:production][:log_level]  = :info
 # Add your before (RE)load hooks here
 #
 Padrino.before_load do
+  Dotenv.load unless Padrino.env == :production
 end
 
 ##
 # Add your after (RE)load hooks here
 #
 Padrino.after_load do
-  Dotenv.load unless Padrino.env == :production
 end
 
 Padrino.load!

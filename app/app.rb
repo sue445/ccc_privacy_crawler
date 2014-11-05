@@ -62,5 +62,15 @@ module CccPrivacyCrawler
     #     render 'errors/500'
     #   end
     #
+
+    unless ENV["BUGSNAG_APP_KEY"].blank?
+      Bugsnag.configure do |config|
+        config.api_key = ENV["BUGSNAG_APP_KEY"]
+        config.notify_release_stages = %w(production)
+      end
+
+      use Bugsnag::Rack
+      enable :raise_errors
+    end
   end
 end
