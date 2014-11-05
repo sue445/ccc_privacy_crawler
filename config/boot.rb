@@ -31,6 +31,7 @@ Bundler.require(:default, RACK_ENV)
 #   include Padrino::Helpers::TranslationHelpers
 # end
 Padrino::Logger::Config[:production][:stream] = :stdout
+Padrino::Logger::Config[:production][:log_level]  = :info
 
 ##
 # Add your before (RE)load hooks here
