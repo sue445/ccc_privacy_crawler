@@ -1,0 +1,34 @@
+# https://circleci.com/docs/config-sample
+machine:
+  ruby:
+    version: 2.1.4
+
+  # Add some environment variables
+  environment:
+#    CODECLIMATE_REPO_TOKEN:
+#    COVERALLS_REPO_TOKEN:
+
+## Customize dependencies
+#dependencies:
+
+## Customize database setup
+database:
+  override:
+    # replace CircleCI's generated database.yml
+    - cp spec/circle_ci/database.yml.postgresql config/database.yml
+    - RACK_ENV=test bundle exec rake ar:migrate:reset
+
+## Customize test commands
+test:
+  override:
+    - RACK_ENV=test bundle exec rspec
+
+## Customize deployment commands
+#deployment:
+#  production:
+#    branch: master
+#    commands:
+#      - heroku config:add BUNDLE_WITHOUT="test:development:sqlite3:mysql" --app $HEROKU_APP_NAME
+#      - git push git@heroku.com:ccc_privacy_crawler.git $CIRCLE_SHA1:refs/heads/master
+#      - heroku run rake ar:migrate --app $HEROKU_APP_NAME:
+#          timeout: 400 # if your deploys take a long time
