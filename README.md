@@ -1,5 +1,6 @@
 # CCC Privacy Crawler
 [![Circle CI](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master.png?style=badge)](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master)
+[![Dependency Status](https://gemnasium.com/sue445/ccc_privacy_crawler.svg)](https://gemnasium.com/sue445/ccc_privacy_crawler)
 
 ## Requirements
 * Ruby 2.1.4
