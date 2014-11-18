@@ -5,6 +5,7 @@
   "scripts": {
     "postdeploy": "bundle exec rake ar:create ar:migrate"
   },
+  "logo": "https://raw.githubusercontent.com/sue445/ccc_privacy_crawler/master/img/ccc_privary_bot_logo.png",
   "env": {
     "BUNDLE_WITHOUT": {
       "description": "bundle install --without <these>",
