@@ -16,6 +16,8 @@
 #
 
 class Company < ActiveRecord::Base
+  LIST_PDF_URL = "http://qa.tsite.jp/faq/show/25129"
+
   def self.import_new_companies(companies)
     new_companies = []
     companies.each do |company|
@@ -28,7 +30,7 @@ class Company < ActiveRecord::Base
   end
 
   def notify_to_twitter
-    message = "T-CARDの個人情報提供先に No.#{no}「#{company_name}」が追加されました(#{receipted_date}付)"
+    message = "T-CARDの個人情報提供先に No.#{no}「#{company_name}」が追加されました(#{receipted_date}付) #{LIST_PDF_URL}"
     Padrino.logger.info message
     client.update(message)
   end

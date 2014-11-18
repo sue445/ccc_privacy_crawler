@@ -19,7 +19,7 @@ class PdfCrawlWorker
 
   def download_ccc_pdf(dest_pdf_file)
     agent = Mechanize.new
-    agent.get("http://qa.tsite.jp/faq/show/25129")
+    agent.get(Company::LIST_PDF_URL)
 
     download_link = agent.page.link_with(href: %r(/attachment_file/.+\.pdf))
     raise "Not found download_link" unless download_link
