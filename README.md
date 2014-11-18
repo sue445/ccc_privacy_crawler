@@ -1,5 +1,5 @@
 # CCC Privacy Crawler
-[![wercker status](https://app.wercker.com/status/91dcba24a5f721c86e17cd46bdae30aa/m "wercker status")](https://app.wercker.com/project/bykey/91dcba24a5f721c86e17cd46bdae30aa)
+[![Circle CI](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master.png?style=badge)](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master)
 
 ## Requirements
 * Ruby 2.1.4
