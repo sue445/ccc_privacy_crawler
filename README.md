@@ -5,7 +5,7 @@
 [![Coverage Status](https://img.shields.io/coveralls/sue445/ccc_privacy_crawler.svg)](https://coveralls.io/r/sue445/ccc_privacy_crawler)
 
 ## Requirements
-* Ruby 2.1.4
+* Ruby 2.1.5
 
 ## Setup
 * create twitter app and generate access token
