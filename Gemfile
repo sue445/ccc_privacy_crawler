@@ -24,6 +24,7 @@ group :development do
 end
 
 group :test do
+  gem 'coveralls', require: false
   gem 'database_rewinder'
   gem 'factory_girl'
   gem 'rspec'
