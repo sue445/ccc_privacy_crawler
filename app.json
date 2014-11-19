@@ -1,0 +1,25 @@
+{
+  "name": "CCC Privacy Crawler",
+  "description": "Tカードの 個人情報提供の停止 対象企業一覧 の新着を通知するためのTwitterボットです",
+  "keywords": ["ruby", "padrino", "twitter"],
+  "scripts": {
+    "postdeploy": "bundle exec rake ar:create ar:migrate"
+  },
+  "logo": "https://raw.githubusercontent.com/sue445/ccc_privacy_crawler/master/img/ccc_privary_bot_logo.png",
+  "env": {
+    "BUNDLE_WITHOUT": {
+      "description": "bundle install --without <these>",
+      "value": "test:development"
+    },
+    "REDIS_PROVIDER": "REDISCLOUD_URL",
+    "TWITTER_CONSUMER_KEY": "",
+    "TWITTER_CONSUMER_SECRET":"",
+    "TWITTER_ACCESS_TOKEN":"",
+    "TWITTER_ACCESS_TOKEN_SECRET":""
+  },
+  "addons": [
+    "papertrail",
+    "rediscloud",
+    "bugsnag"
+  ]
+}
