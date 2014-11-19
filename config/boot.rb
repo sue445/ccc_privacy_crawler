@@ -32,6 +32,8 @@ Bundler.require(:default, RACK_ENV)
 # end
 Padrino::Logger::Config[:production][:stream] = :stdout
 Padrino::Logger::Config[:production][:log_level]  = :info
+Padrino::Logger::Config[:test][:stream] = :stdout
+Padrino::Logger::Config[:test][:log_level]  = :info
 
 ##
 # Add your before (RE)load hooks here
