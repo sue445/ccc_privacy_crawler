@@ -107,7 +107,9 @@ RSpec.configure do |config|
   end
 
   config.after :each do
-    DatabaseRewinder.clean
+    # FIXME: can not clear sometimes
+    # DatabaseRewinder.clean
+    DatabaseRewinder.clean_all
   end
 end
 
