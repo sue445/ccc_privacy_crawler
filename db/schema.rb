@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141103085818) do
+ActiveRecord::Schema.define(version: 20141119131622) do
 
   create_table "companies", force: true do |t|
     t.integer  "no",               null: false
@@ -22,6 +22,6 @@ ActiveRecord::Schema.define(version: 20141103085818) do
     t.datetime "updated_at"
   end
 
-  add_index "companies", ["no"], name: "index_companies_on_no", unique: true
+  add_index "companies", ["company_name", "receipted_date"], name: "index_companies_on_company_name_and_receipted_date", unique: true
 
 end

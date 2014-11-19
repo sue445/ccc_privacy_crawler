@@ -21,7 +21,7 @@ class Company < ActiveRecord::Base
   def self.import_new_companies(companies)
     new_companies = []
     companies.each do |company|
-      next if Company.exists?(no: company.no)
+      next if Company.exists?(company_name: company.company_name, receipted_date: company.receipted_date)
 
       company.save!
       new_companies << company
