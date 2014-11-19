@@ -12,7 +12,7 @@
 #
 # Indexes
 #
-#  index_companies_on_no  (no) UNIQUE
+#  index_companies_on_company_name_and_receipted_date  (company_name,receipted_date) UNIQUE
 #
 
 class Company < ActiveRecord::Base
