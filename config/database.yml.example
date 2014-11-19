@@ -1,11 +1,11 @@
 development:
   adapter: sqlite3
-  database: db/gemoire_development.db
+  database: db/ccc_privacy_crawler_development.db
 
 test:
   adapter: sqlite3
-  database: db/gemoire_test.db
+  database: db/ccc_privacy_crawler_test.db
 
 production:
   adapter: sqlite3
-  database: db/gemoire_production.db
+  database: db/ccc_privacy_crawler_production.db
