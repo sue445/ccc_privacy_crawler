@@ -4,7 +4,10 @@ class PdfCrawlWorker
   def perform
     dest_pdf_file = Padrino.root("tmp", "ccc.pdf")
     download_ccc_pdf(dest_pdf_file)
+
     companies = parse_ccc_pdf(dest_pdf_file)
+    raise "Could not get companies in pdf table (changed pdf format?)" if companies.empty?
+
     new_companies = Company.import_new_companies(companies)
 
     if new_companies.empty?
