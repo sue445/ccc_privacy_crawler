@@ -18,6 +18,7 @@
     "TWITTER_ACCESS_TOKEN_SECRET":""
   },
   "addons": [
+    "rollbar",
     "papertrail",
     "rediscloud",
     "bugsnag"

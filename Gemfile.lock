@@ -153,6 +153,8 @@ GEM
     rest-client (1.7.2)
       mime-types (>= 1.16, < 3.0)
       netrc (~> 0.7)
+    rollbar (1.2.9)
+      multi_json (~> 1.3)
     rspec (3.1.0)
       rspec-core (~> 3.1.0)
       rspec-expectations (~> 3.1.0)
@@ -250,6 +252,7 @@ DEPENDENCIES
   pry-nav
   rack-test
   rake
+  rollbar (~> 1.2.6)
   rspec
   rspec-its
   rspec-temp_dir
