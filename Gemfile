@@ -5,7 +5,6 @@ ruby '2.1.5'
 gem 'padrino', '0.12.4'
 
 gem 'activerecord', '>= 3.1', require: 'active_record'
-gem 'bugsnag'
 gem 'mechanize'
 gem 'pdf-reader'
 gem 'rake'

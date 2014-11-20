@@ -63,16 +63,6 @@ module CccPrivacyCrawler
     #   end
     #
 
-    unless ENV["BUGSNAG_APP_KEY"].blank?
-      Bugsnag.configure do |config|
-        config.api_key = ENV["BUGSNAG_APP_KEY"]
-        config.notify_release_stages = %w(production)
-      end
-
-      use Bugsnag::Rack
-      enable :raise_errors
-    end
-
     if ENV["ROLLBAR_ACCESS_TOKEN"].present? && Padrino.env == :production
       require "rollbar/middleware/sinatra"
       Rollbar.configure do |config|
