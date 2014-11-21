@@ -83,6 +83,7 @@ GEM
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     netrc (0.8.0)
+    newrelic_rpm (3.9.7.266)
     nokogiri (1.6.3.1)
       mini_portile (= 0.6.0)
     ntlm-http (0.1.1)
@@ -237,6 +238,7 @@ DEPENDENCIES
   factory_girl
   foreman
   mechanize
+  newrelic_rpm
   padrino (= 0.12.4)
   pdf-reader
   pg
