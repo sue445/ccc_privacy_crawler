@@ -6,6 +6,7 @@ gem 'padrino', '0.12.4'
 
 gem 'activerecord', '>= 3.1', require: 'active_record'
 gem 'mechanize'
+gem 'newrelic_rpm'
 gem 'pdf-reader'
 gem 'rake'
 gem 'rollbar', '~> 1.2.6'

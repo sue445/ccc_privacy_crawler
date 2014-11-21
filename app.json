@@ -18,6 +18,7 @@
     "TWITTER_ACCESS_TOKEN_SECRET":""
   },
   "addons": [
+    "newrelic:stark",
     "rollbar",
     "papertrail",
     "rediscloud"
