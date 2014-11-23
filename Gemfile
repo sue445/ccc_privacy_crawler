@@ -4,16 +4,16 @@ ruby '2.1.5'
 
 gem 'padrino', '0.12.4'
 
-gem 'activerecord', '>= 3.1', require: 'active_record'
+gem 'activerecord', '4.1.8', require: 'active_record'
 gem 'mechanize'
 gem 'newrelic_rpm'
 gem 'pdf-reader'
 gem 'rake'
 gem 'rollbar', '~> 1.2.6'
-gem 'sidekiq'
+gem 'sidekiq', '3.3.0'
 gem 'sidekiq-cron'
 gem 'slim'
-gem 'twitter'
+gem 'twitter', '5.13.0'
 
 group :development do
   gem 'annotate'
