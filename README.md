@@ -58,3 +58,7 @@ Note: Change Dyno count
 * crawler: 0 -> 1
 
 ![heroku](img/heroku.png)
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sue445/ccc_privacy_crawler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
