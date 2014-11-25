@@ -8,6 +8,8 @@ https://twitter.com/ccc_privacy_bot
 [![Code Climate](https://codeclimate.com/github/sue445/ccc_privacy_crawler/badges/gpa.svg)](https://codeclimate.com/github/sue445/ccc_privacy_crawler)
 [![Coverage Status](https://img.shields.io/coveralls/sue445/ccc_privacy_crawler.svg)](https://coveralls.io/r/sue445/ccc_privacy_crawler)
 
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sue445/ccc_privacy_crawler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
 ## Requirements
 * Ruby 2.1.5
 * redis (for scheduler)
