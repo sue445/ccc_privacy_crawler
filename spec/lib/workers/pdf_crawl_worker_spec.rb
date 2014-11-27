@@ -1,6 +1,17 @@
 RSpec.describe PdfCrawlWorker do
   let(:worker){ PdfCrawlWorker.new }
 
+  describe "#perform" do
+    subject{ worker.perform }
+
+    before do
+      # don't tweet
+      allow_any_instance_of(Company).to receive(:notify_to_twitter)
+    end
+
+    it { expect{ subject }.not_to raise_error }
+  end
+
   describe "#download_ccc_pdf" do
     subject!{ worker.download_ccc_pdf(dest_pdf) }
 
