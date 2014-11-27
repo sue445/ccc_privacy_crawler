@@ -1,5 +1,6 @@
 class PdfCrawlWorker
   include Sidekiq::Worker
+  sidekiq_options retry: false
 
   def perform
     dest_pdf_file = Padrino.root("tmp", "ccc.pdf")
