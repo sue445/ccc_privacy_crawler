@@ -20,6 +20,7 @@ class PdfCrawlWorker
       Padrino.logger.info "Add #{new_companies.count} companies"
     end
   rescue => e
+    # TODO: Remove after
     Rollbar.error(e)
     raise
   end

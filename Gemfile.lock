@@ -180,6 +180,9 @@ GEM
       rufus-scheduler (>= 2.0.24)
       sidekiq (>= 2.17.3)
       tilt (< 2.0.0)
+    sidekiq-rollbar (0.0.1)
+      rollbar
+      sidekiq
     simple_oauth (0.3.0)
     simplecov (0.9.1)
       docile (~> 1.1.0)
@@ -254,6 +257,7 @@ DEPENDENCIES
   rspec-temp_dir
   sidekiq (= 3.3.0)
   sidekiq-cron
+  sidekiq-rollbar
   slim
   sqlite3
   twitter (= 5.13.0)
