@@ -3,7 +3,7 @@
 :test: rspec
 :mock: none
 :script: none
-:renderer: slim
+:renderer: none
 :stylesheet: none
 :namespace: CccPrivacyCrawler
 :migration_format: timestamp
