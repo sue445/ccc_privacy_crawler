@@ -13,7 +13,6 @@ gem 'rollbar', '~> 1.2.6'
 gem 'sidekiq', '3.3.0'
 gem 'sidekiq-cron'
 gem 'sidekiq-rollbar'
-gem 'slim'
 gem 'twitter', '5.13.0'
 
 group :development do
