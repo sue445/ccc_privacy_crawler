@@ -1,5 +1,7 @@
-require 'coveralls'
-Coveralls.wear!
+if ENV["COVERAGE"]
+  require 'coveralls'
+  Coveralls.wear!
+end
 
 RACK_ENV = 'test' unless defined?(RACK_ENV)
 require File.expand_path(File.dirname(__FILE__) + "/../config/boot")
