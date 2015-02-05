@@ -21,6 +21,7 @@
     "newrelic:stark",
     "rollbar",
     "papertrail",
+    "pgbackups:auto-month",
     "rediscloud"
   ]
 }
