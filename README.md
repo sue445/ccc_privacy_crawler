@@ -51,3 +51,6 @@ heroku config:set NEWRELIC_LICENSE_KEY=xxxxxxxxxxxxxxxxxx
 ## Heroku deploy
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
+register `rake crawl_pdf` to [Heroku Scheduler](https://addons.heroku.com/scheduler)
+
+![Heroku Scheduler](img/heroku_scheduler.png)
