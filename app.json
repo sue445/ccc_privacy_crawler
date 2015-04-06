@@ -20,7 +20,6 @@
     "rollbar",
     "papertrail",
     "pgbackups:auto-month",
-    "scheduler",
-    "rediscloud"
+    "scheduler"
   ]
 }
