@@ -1,4 +1,0 @@
-ccc_crwal:
-  cron: "*/30 * * * *"
-  class: PdfCrawlWorker
-  queue: default

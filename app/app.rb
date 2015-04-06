@@ -71,5 +71,9 @@ module CccPrivacyCrawler
 
       use Rollbar::Middleware::Sinatra
     end
+
+    get "/" do
+      "It works!"
+    end
   end
 end
