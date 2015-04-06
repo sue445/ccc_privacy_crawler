@@ -46,15 +46,8 @@ heroku config:set TWITTER_CONSUMER_SECRET=xxxxxxxxxxxxxxxxxx
 heroku config:set TWITTER_ACCESS_TOKEN=xxxxxxxxxxxxxxxxxx
 heroku config:set TWITTER_ACCESS_TOKEN_SECRET=xxxxxxxxxxxxxxxxxx
 heroku config:set NEWRELIC_LICENSE_KEY=xxxxxxxxxxxxxxxxxx
-heroku config:set REDIS_PROVIDER=REDISTOGO_URL
 ```
 
 ## Heroku deploy
 [![Deploy](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
 
-Note: Change Dyno count
-
-* web: 1 -> 0
-* crawler: 0 -> 1
-
-![heroku](img/heroku.png)

@@ -1,1 +1,1 @@
-crawler: bundle exec sidekiq -r ./config/sidekiq.rb
+web: bundle exec padrino s
