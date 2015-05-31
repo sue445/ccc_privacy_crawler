@@ -2,15 +2,15 @@ source 'https://rubygems.org'
 
 ruby '2.2.1'
 
-gem 'padrino', '0.12.4'
+gem 'padrino', '0.12.5'
 
-gem 'activerecord', '4.2.0', require: 'active_record'
+gem 'activerecord', '~> 4.2.1', require: 'active_record'
 gem 'mechanize'
 gem 'newrelic_rpm'
 gem 'pdf-reader'
 gem 'rake'
-gem 'rollbar', '~> 1.3.1'
-gem 'twitter', '5.13.0'
+gem 'rollbar'
+gem 'twitter'
 
 group :development do
   gem 'annotate'
