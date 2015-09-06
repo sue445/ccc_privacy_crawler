@@ -1,0 +1,10 @@
+development:
+  adapter: sqlite3
+  database: db/gemoire_development.db
+
+test:
+  adapter: sqlite3
+  database: db/gemoire_test.db
+
+production:
+  url: <%= ENV['DATABASE_URL'] %>

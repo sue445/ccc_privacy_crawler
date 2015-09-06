@@ -8,6 +8,5 @@ db/*.db
 .*.sw*
 vendor/bundle/
 .bundle/
-config/database.yml
 .env
 coverage/
