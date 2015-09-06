@@ -19,8 +19,6 @@ https://twitter.com/ccc_privacy_bot
   * https://apps.twitter.com/
 
 ```bash
-cp config/database.yml{.example,}
-vi config/database.yml
 cp .env{.example,}
 vi .env
 
