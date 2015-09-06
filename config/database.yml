@@ -7,4 +7,7 @@ test:
   database: db/gemoire_test.db
 
 production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   url: <%= ENV['DATABASE_URL'] %>
