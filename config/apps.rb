@@ -36,5 +36,5 @@ end
 Padrino.mount('CccPrivacyCrawler::App', :app_file => Padrino.root('app/app.rb')).to('/')
 
 ActiveRecord::SimpleIndexName.configure do |config|
-  config.auto_shorten = true
+  config.auto_shorten = false
 end
