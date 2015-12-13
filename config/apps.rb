@@ -34,3 +34,7 @@ end
 
 # Mounts the core application for this project
 Padrino.mount('CccPrivacyCrawler::App', :app_file => Padrino.root('app/app.rb')).to('/')
+
+ActiveRecord::SimpleIndexName.configure do |config|
+  config.auto_shorten = false
+end

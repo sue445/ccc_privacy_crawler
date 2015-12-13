@@ -9,6 +9,9 @@ GEM
       activemodel (= 4.2.5)
       activesupport (= 4.2.5)
       arel (~> 6.0)
+    activerecord-simple_index_name (0.2.0.beta1)
+      activerecord
+      activesupport
     activesupport (4.2.5)
       i18n (~> 0.7)
       json (~> 1.7, >= 1.7.7)
@@ -215,6 +218,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 4.2.1)
+  activerecord-simple_index_name (= 0.2.0.beta1)
   annotate
   coveralls
   database_rewinder
@@ -236,3 +240,6 @@ DEPENDENCIES
   rspec-temp_dir
   sqlite3
   twitter
+
+BUNDLED WITH
+   1.10.6
