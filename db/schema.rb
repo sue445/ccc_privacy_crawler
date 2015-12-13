@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20141119131622) do
 
-  create_table "companies", force: true do |t|
+  create_table "companies", force: :cascade do |t|
     t.integer  "no",               null: false
     t.string   "company_name",     null: false
     t.string   "receipted_date",   null: false
