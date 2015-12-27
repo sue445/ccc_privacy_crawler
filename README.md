@@ -11,8 +11,7 @@ https://twitter.com/ccc_privacy_bot
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sue445/ccc_privacy_crawler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ## Requirements
-* Ruby 2.2.3
-* redis (for scheduler)
+* Ruby 2.3.0
 
 ## Setup
 * create twitter app and generate access token
