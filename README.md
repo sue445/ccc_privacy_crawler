@@ -12,7 +12,6 @@ https://twitter.com/ccc_privacy_bot
 
 ## Requirements
 * Ruby 2.3.0
-* redis (for scheduler)
 
 ## Setup
 * create twitter app and generate access token
