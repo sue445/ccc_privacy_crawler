@@ -211,7 +211,7 @@ GEM
     unf_ext (0.0.7.1)
     url_mount (0.2.1)
       rack
-    webrobots (0.1.1)
+    webrobots (0.1.2)
 
 PLATFORMS
   ruby
