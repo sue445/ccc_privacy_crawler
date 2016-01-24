@@ -1,0 +1,4 @@
+inherit_from: ".onkcop.yml"
+
+AllCops:
+  TargetRubyVersion: 2.3
