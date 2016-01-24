@@ -1,4 +1,4 @@
-ActiveRecord::Base.configurations = YAML.load(ERB.new(File.read(Padrino.root('config', 'database.yml'))).result).with_indifferent_access
+ActiveRecord::Base.configurations = YAML.load(ERB.new(File.read(Padrino.root("config", "database.yml"))).result).with_indifferent_access
 
 # Setup our logger
 ActiveRecord::Base.logger = logger

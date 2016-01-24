@@ -16,7 +16,7 @@
 #
 
 class Company < ActiveRecord::Base
-  LIST_PDF_URL = "http://qa.tsite.jp/faq/show/25129"
+  LIST_PDF_URL = "http://qa.tsite.jp/faq/show/25129".freeze
 
   def self.import_new_companies(companies)
     new_companies = []
@@ -37,12 +37,12 @@ class Company < ActiveRecord::Base
 
   private
 
-  def client
-    Twitter::REST::Client.new do |config|
-      config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
-      config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
-      config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
-      config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
+    def client
+      Twitter::REST::Client.new do |config|
+        config.consumer_key        = ENV["TWITTER_CONSUMER_KEY"]
+        config.consumer_secret     = ENV["TWITTER_CONSUMER_SECRET"]
+        config.access_token        = ENV["TWITTER_ACCESS_TOKEN"]
+        config.access_token_secret = ENV["TWITTER_ACCESS_TOKEN_SECRET"]
+      end
     end
-  end
 end

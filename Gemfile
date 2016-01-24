@@ -1,6 +1,6 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-ruby '2.3.0'
+ruby "2.3.0"
 
 # Distribute your app as a gem
 # gemspec
@@ -16,8 +16,8 @@ ruby '2.3.0'
 gem "rake"
 
 # Component requirements
-gem 'slim'
-gem 'sass'
+gem "slim"
+gem "sass"
 gem "activerecord", ">= 3.1", require: "active_record"
 
 # Test requirements
@@ -35,31 +35,32 @@ gem "padrino", "0.13.1"
 #   gem 'padrino-' + g, '0.12.4'
 # end
 
-gem 'activerecord-simple_index_name'
-gem 'mechanize'
-gem 'newrelic_rpm'
-gem 'pdf-reader'
-gem 'puma'
-gem 'rollbar'
-gem 'twitter'
+gem "activerecord-simple_index_name"
+gem "mechanize"
+gem "newrelic_rpm"
+gem "pdf-reader"
+gem "puma"
+gem "rollbar"
+gem "twitter"
 
 group :development do
-  gem 'annotate'
-  gem 'dotenv' , group: :test
-  gem 'foreman'
-  gem 'pry'    , group: :test
-  gem 'pry-nav', group: :test
-  gem 'sqlite3', group: :test
+  gem "annotate"
+  gem "dotenv", group: :test
+  gem "foreman"
+  gem "rubocop", "0.36.0"
+  gem "pry", group: :test
+  gem "pry-nav", group: :test
+  gem "sqlite3", group: :test
 end
 
 group :test do
-  gem 'coveralls', require: false
-  gem 'database_rewinder'
-  gem 'factory_girl'
-  gem 'rspec-its'
-  gem 'rspec-temp_dir'
+  gem "coveralls", require: false
+  gem "database_rewinder"
+  gem "factory_girl"
+  gem "rspec-its"
+  gem "rspec-temp_dir"
 end
 
 group :production do
-  gem 'pg', group: :test
+  gem "pg", group: :test
 end

@@ -1,14 +1,14 @@
 # Defines our constants
-RACK_ENV = ENV['RACK_ENV'] ||= 'development'  unless defined?(RACK_ENV)
-PADRINO_ROOT = File.expand_path('../..', __FILE__) unless defined?(PADRINO_ROOT)
+RACK_ENV = ENV["RACK_ENV"] ||= "development" unless defined?(RACK_ENV)
+PADRINO_ROOT = File.expand_path("../..", __FILE__) unless defined?(PADRINO_ROOT)
 
 module Padrino
   IGNORE_NO_RENDERING_ENGINE = true
 end
 
 # Load our dependencies
-require 'rubygems' unless defined?(Gem)
-require 'bundler/setup'
+require "rubygems" unless defined?(Gem)
+require "bundler/setup"
 Bundler.require(:default, RACK_ENV)
 
 ##
@@ -38,9 +38,9 @@ Bundler.require(:default, RACK_ENV)
 I18n.default_locale = :ja
 
 Padrino::Logger::Config[:production][:stream] = :stdout
-Padrino::Logger::Config[:production][:log_level]  = :info
+Padrino::Logger::Config[:production][:log_level] = :info
 Padrino::Logger::Config[:test][:stream] = :stdout
-Padrino::Logger::Config[:test][:log_level]  = :info
+Padrino::Logger::Config[:test][:log_level] = :info
 
 ##
 # Add your before (RE)load hooks here

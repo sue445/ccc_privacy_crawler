@@ -11,9 +11,7 @@ class PdfCrawlWorker
     if new_companies.empty?
       Padrino.logger.info "not found new companies"
     else
-      new_companies.each do |company|
-        company.notify_to_twitter
-      end
+      new_companies.each(&:notify_to_twitter)
       Padrino.logger.info "Add #{new_companies.count} companies"
     end
   rescue => e
@@ -26,7 +24,7 @@ class PdfCrawlWorker
     agent = Mechanize.new
     agent.get(Company::LIST_PDF_URL)
 
-    download_link = agent.page.link_with(href: %r(/attachment_file/.+\.pdf))
+    download_link = agent.page.link_with(href: %r{/attachment_file/.+\.pdf})
     raise "Not found download_link" unless download_link
 
     pdf_content = agent.get_file(download_link.href)
@@ -51,7 +49,7 @@ class PdfCrawlWorker
         no:               matched_data[:no].to_i,
         company_name:     matched_data[:company_name].strip,
         receipted_date:   matched_data[:receipted_date].strip,
-        destination_name: matched_data[:destination_name].strip,
+        destination_name: matched_data[:destination_name].strip
       )
     end
 
@@ -59,15 +57,15 @@ class PdfCrawlWorker
   end
 
   private
-  def read_pdf(pdf_file)
-    pdf_content = ""
 
-    reader = PDF::Reader.new(pdf_file)
-    reader.pages.each do |page|
-      pdf_content << page.text
+    def read_pdf(pdf_file)
+      pdf_content = ""
+
+      reader = PDF::Reader.new(pdf_file)
+      reader.pages.each do |page|
+        pdf_content << page.text
+      end
+
+      pdf_content
     end
-
-    pdf_content
-  end
-
 end

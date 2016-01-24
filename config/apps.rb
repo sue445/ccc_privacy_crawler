@@ -27,13 +27,13 @@
 #
 Padrino.configure_apps do
   # enable :sessions
-  set :session_secret, '3c31ededd3a6589a417497f55b6bae91a5d33d4fc3fb7a13e29d257bea71c899'
-  set :protection, :except => :path_traversal
+  set :session_secret, "3c31ededd3a6589a417497f55b6bae91a5d33d4fc3fb7a13e29d257bea71c899"
+  set :protection, except: :path_traversal
   set :protect_from_csrf, true
 end
 
 # Mounts the core application for this project
-Padrino.mount('CccPrivacyCrawler::App', :app_file => Padrino.root('app/app.rb')).to('/')
+Padrino.mount("CccPrivacyCrawler::App", app_file: Padrino.root("app/app.rb")).to("/")
 
 ActiveRecord::SimpleIndexName.configure do |config|
   config.auto_shorten = false

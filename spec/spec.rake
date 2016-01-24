@@ -1,7 +1,7 @@
 begin
-  require 'rspec/core/rake_task'
+  require "rspec/core/rake_task"
 
-  spec_tasks = Dir['spec/*/'].each_with_object([]) do |d, result|
+  spec_tasks = Dir["spec/*/"].each_with_object([]) do |d, result|
     result << File.basename(d) unless Dir["#{d}*"].empty?
   end
 
@@ -14,7 +14,7 @@ begin
   end
 
   desc "Run complete application spec suite"
-  task 'spec' => spec_tasks.map { |f| "spec:#{f}" }
+  task "spec" => spec_tasks.map { |f| "spec:#{f}" }
 rescue LoadError
   puts "RSpec is not part of this bundle, skip specs."
 end
