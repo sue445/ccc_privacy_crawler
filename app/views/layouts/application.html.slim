@@ -1,0 +1,61 @@
+html
+  head
+    meta charset="utf-8"
+    meta http-equiv="X-UA-Compatible" content="IE=edge"
+    meta name="viewport"    content="width=device-width, initial-scale=1"
+    meta name="description" content="Tカードの 個人情報提供の停止 対象企業一覧 の新着を通知するためのTwitterボットです"
+    meta name="keywords"    content="Tカード,CCC"
+    meta property="og:title"       content="CCC Privacy Crawler"
+    meta property="og:type"        content="website"
+    meta property="og:description" content="Tカードの 個人情報提供の停止 対象企業一覧 の新着を通知するためのTwitterボットです"
+    meta property="og:url"         content="https://ccc-privacy-crawler.herokuapp.com/"
+    title= [@title, "CCC Privacy Crawler"].compact.join(" | ")
+    = stylesheet_link_tag 'bootstrap.min', 'application'
+    = javascript_include_tag 'jquery', 'jquery-ujs', 'bootstrap.min', 'application'
+    = yield_content :include
+
+    /! Le HTML5 shim, for IE6-8 support of HTML elements
+    /[if lt IE 9]
+      = javascript_include_tag "//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"
+  body
+    .navbar.navbar-static-top.navbar-inverse
+      .container
+        button.navbar-toggle type="button" data-toggle="collapse" data-target=".navbar-responsive-collapse"
+          span.icon-bar
+          span.icon-bar
+          span.icon-bar
+        a.navbar-brand href="/" CCC Privacy Crawler
+        .nav-collapse.collapse.in.navbar-responsive-collapse
+          ul.nav.navbar-nav.pull-right.menubar-right
+            li
+              .fb-like data-action="like" data-href="https://ccc-privacy-crawler.herokuapp.com/" data-layout="button_count" data-share="true" data-show-faces="false"
+            li
+              a.twitter-share-button href="https://twitter.com/share"  Tweet
+              javascript:
+                !function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+      a href="https://github.com/sue445/ccc_privacy_crawler"
+        img alt="Fork me on GitHub" data-canonical-src="https://s3.amazonaws.com/github/ribbons/forkme_right_orange_ff7600.png" src="https://camo.githubusercontent.com/652c5b9acfaddf3a9c326fa6bde407b87f7be0f4/68747470733a2f2f73332e616d617a6f6e6177732e636f6d2f6769746875622f726962626f6e732f666f726b6d655f72696768745f6f72616e67655f6666373630302e706e67" style="position: absolute; top: 0; right: 0; border: 0;"
+
+    .container
+      .row
+        .col-lg-12
+          = yield
+
+      footer
+        p
+          | &copy;&nbsp;
+          = link_to "sue445", "https://twitter.com/sue445"
+          | &nbsp;2015-
+
+      / Facebook
+      #fb-root
+      javascript:
+        (function (d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s);
+          js.id = id;
+          js.src = "//connect.facebook.net/ja_JP/sdk.js#xfbml=1&appId=681187931912837&version=v2.0";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
