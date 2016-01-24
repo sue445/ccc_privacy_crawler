@@ -1,6 +1,6 @@
 desc "annotate models"
 task :annotate => :environment do
-  require 'annotate/annotate_models'
+  require "annotate/annotate_models"
 
   AnnotateModels.do_annotations(
     model_dir:         "#{__dir__}/../../models/",
