@@ -1,13 +1,12 @@
 require 'spec_helper'
 
 RSpec.describe "/company" do
-  pending "add some examples to #{__FILE__}" do
+  describe "get /" do
     before do
-      get "/company"
+      create_list(:company, 5)
+      get "/"
     end
 
-    it "returns hello world" do
-      expect(last_response.body).to eq "Hello World"
-    end
+    it { expect(last_response.status).to eq 200 }
   end
 end
