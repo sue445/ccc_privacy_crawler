@@ -137,6 +137,7 @@ GEM
       slop (~> 3.4)
     pry-nav (0.2.4)
       pry (>= 0.9.10, < 0.11.0)
+    puma (2.15.3)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -229,6 +230,7 @@ DEPENDENCIES
   pg
   pry
   pry-nav
+  puma
   rack-test
   rake
   rollbar

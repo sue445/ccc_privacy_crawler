@@ -39,6 +39,7 @@ gem 'activerecord-simple_index_name'
 gem 'mechanize'
 gem 'newrelic_rpm'
 gem 'pdf-reader'
+gem 'puma'
 gem 'rollbar'
 gem 'twitter'
 
