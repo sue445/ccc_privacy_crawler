@@ -1,5 +1,6 @@
 module CccPrivacyCrawler
   class App < Padrino::Application
+    register SassInitializer
     use ConnectionPoolManagement
     register Padrino::Mailer
     register Padrino::Helpers
@@ -70,10 +71,6 @@ module CccPrivacyCrawler
       end
 
       use Rollbar::Middleware::Sinatra
-    end
-
-    get "/" do
-      "It works!"
     end
   end
 end

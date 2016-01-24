@@ -1,0 +1,42 @@
+h1 Companies
+
+table.table.table-striped.table-bordered.table-hover
+  thead
+    tr
+      th ID
+      th No.
+      th 企業名称
+      th 届出書 受付開始日
+      th 提携先名称
+      th 作成日時
+      th 更新日時
+
+  - @companies.each do |company|
+    tr
+      td = company.id
+      td = company.no
+      td = company.company_name
+      td = company.receipted_date
+      td = company.destination_name
+      td = jst company.created_at
+      td = jst company.updated_at
+
+  tfoot
+    tr
+      th ID
+      th No.
+      th 企業名称
+      th 届出書 受付開始日
+      th 提携先名称
+      th 作成日時
+      th 更新日時
+
+h2 備考
+
+ul
+  li ID, 作成日時, 更新日時はccc_privacy_crawlerのデータベースに登録された時に使われているデータです
+  li
+    | 同一データでも企業名称が変われば別データとして扱われるのでデータが追加されます
+    br
+    | 例）
+    = link_to "社名変更による更新検知", "https://twitter.com/ccc_privacy_bot/status/616465924367867905"

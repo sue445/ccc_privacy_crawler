@@ -1,1 +1,1 @@
-web: bundle exec padrino s
+web: bundle exec puma -C config/puma.rb

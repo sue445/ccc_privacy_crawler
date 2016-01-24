@@ -2,8 +2,8 @@
 :orm: activerecord
 :test: rspec
 :mock: none
-:script: none
-:renderer: none
-:stylesheet: none
+:script: jquery
+:renderer: slim
+:stylesheet: sass
 :namespace: CccPrivacyCrawler
 :migration_format: timestamp
