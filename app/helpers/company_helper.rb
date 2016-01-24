@@ -3,9 +3,10 @@
 module CccPrivacyCrawler
   class App
     module CompanyHelper
-      # def simple_helper_method
-      # ...
-      # end
+      def jst(time)
+        return unless time
+        l Time.zone.at(time.to_i)
+      end
     end
 
     helpers CompanyHelper

@@ -34,6 +34,9 @@ Bundler.require(:default, RACK_ENV)
 #   include Padrino::Helpers::NumberHelpers
 #   include Padrino::Helpers::TranslationHelpers
 # end
+
+I18n.default_locale = :ja
+
 Padrino::Logger::Config[:production][:stream] = :stdout
 Padrino::Logger::Config[:production][:log_level]  = :info
 Padrino::Logger::Config[:test][:stream] = :stdout
@@ -44,6 +47,7 @@ Padrino::Logger::Config[:test][:log_level]  = :info
 #
 Padrino.before_load do
   Dotenv.load unless Padrino.env == :production
+  Time.zone = "Tokyo"
 end
 
 ##

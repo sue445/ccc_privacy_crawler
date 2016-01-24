@@ -20,7 +20,11 @@ CccPrivacyCrawler::App.controllers :company do
   # end
 
   get :index, map: "/" do
-    @companies = Company.order(id: :desc)
+    @companies = Company.order(updated_at: :desc, id: :desc)
     render :index
+  end
+
+  before do
+    Time.zone = "Tokyo"
   end
 end
