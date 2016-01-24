@@ -28,8 +28,17 @@ bundle exec padrino rake ar:create ar:migrate
 ```
 
 ## Run development
+run local server
+
 ```bash
-bundle exec padrino r "PdfCrawlWorker.new.perform"
+bundle exec padrino s
+open http://localhost:3000/
+```
+
+run crawler
+
+```bash
+bundle exec rake crawl_pdf
 ```
 
 ## Test
