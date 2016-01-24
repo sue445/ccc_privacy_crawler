@@ -1,8 +1,8 @@
 class CreateCompanies < ActiveRecord::Migration
   def self.up
     create_table :companies do |t|
-      t.integer :no, null: false
-      t.string  :company_name, null: false
+      t.integer :no,             null: false
+      t.string  :company_name,   null: false
       t.string  :receipted_date, null: false
       t.text    :destination_name
       t.timestamps
