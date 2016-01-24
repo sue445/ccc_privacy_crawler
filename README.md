@@ -1,7 +1,9 @@
 # CCC Privacy Crawler
 Tカードの [個人情報提供の停止 対象企業一覧](http://qa.tsite.jp/faq/show/25129) の新着を通知するためのTwitterボットです
 
-https://twitter.com/ccc_privacy_bot
+* Twitter: https://twitter.com/ccc_privacy_bot
+* Twilog: http://twilog.org/ccc_privacy_bot
+* webアプリ: https://ccc-privacy-crawler.herokuapp.com/
 
 [![Circle CI](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master.png?style=badge)](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master)
 [![Dependency Status](https://gemnasium.com/sue445/ccc_privacy_crawler.svg)](https://gemnasium.com/sue445/ccc_privacy_crawler)
