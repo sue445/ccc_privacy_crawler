@@ -1,5 +1,6 @@
 module CccPrivacyCrawler
   class App < Padrino::Application
+    register SassInitializer
     use ConnectionPoolManagement
     register Padrino::Mailer
     register Padrino::Helpers

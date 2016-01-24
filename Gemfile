@@ -16,6 +16,7 @@ ruby '2.3.0'
 gem "rake"
 
 # Component requirements
+gem 'sass'
 gem "activerecord", ">= 3.1", require: "active_record"
 
 # Test requirements

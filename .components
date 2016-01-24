@@ -4,6 +4,6 @@
 :mock: none
 :script: none
 :renderer: none
-:stylesheet: none
+:stylesheet: sass
 :namespace: CccPrivacyCrawler
 :migration_format: timestamp
