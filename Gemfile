@@ -5,7 +5,7 @@ ruby '2.3.0'
 gem 'padrino', '0.12.5'
 
 gem 'activerecord', '~> 4.2.1', require: 'active_record'
-gem 'activerecord-simple_index_name', '0.2.0.beta1'
+gem 'activerecord-simple_index_name'
 gem 'mechanize'
 gem 'newrelic_rpm'
 gem 'pdf-reader'

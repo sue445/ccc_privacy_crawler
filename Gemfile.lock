@@ -9,7 +9,7 @@ GEM
       activemodel (= 4.2.5)
       activesupport (= 4.2.5)
       arel (~> 6.0)
-    activerecord-simple_index_name (0.2.0.beta1)
+    activerecord-simple_index_name (0.2.0)
       activerecord
       activesupport
     activesupport (4.2.5)
@@ -218,7 +218,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 4.2.1)
-  activerecord-simple_index_name (= 0.2.0.beta1)
+  activerecord-simple_index_name
   annotate
   coveralls
   database_rewinder
@@ -242,4 +242,4 @@ DEPENDENCIES
   twitter
 
 BUNDLED WITH
-   1.10.6
+   1.11.2
