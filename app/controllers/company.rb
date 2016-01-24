@@ -1,5 +1,5 @@
 CccPrivacyCrawler::App.controllers :company do
-  
+
   # get :index, :map => '/foo/bar' do
   #   session[:foo] = 'bar'
   #   render 'index'
@@ -18,9 +18,9 @@ CccPrivacyCrawler::App.controllers :company do
   # get '/example' do
   #   'Hello world!'
   # end
-  
-  get :index do
 
+  get :index, map: "/" do
+    @companies = Company.order(id: :desc)
+    render :index
   end
-
 end
