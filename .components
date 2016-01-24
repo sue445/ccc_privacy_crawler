@@ -2,7 +2,7 @@
 :orm: activerecord
 :test: rspec
 :mock: none
-:script: none
+:script: jquery
 :renderer: slim
 :stylesheet: sass
 :namespace: CccPrivacyCrawler
