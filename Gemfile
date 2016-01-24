@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 ruby '2.3.0'
 
-gem 'padrino', '0.12.5'
+gem 'padrino', '0.13.1'
 
 gem 'activerecord', '~> 4.2.1', require: 'active_record'
 gem 'activerecord-simple_index_name'
