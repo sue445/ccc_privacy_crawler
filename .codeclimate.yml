@@ -1,0 +1,6 @@
+exclude_paths:
+  - public/javascripts/bootstrap.js
+  - public/javascripts/bootstrap.min.js
+  - public/javascripts/jquery-ujs.js
+  - public/javascripts/jquery.js
+  - public/javascripts/npm.js
