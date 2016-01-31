@@ -1,4 +1,8 @@
-h1 Companies
+h1 企業一覧
+
+p
+  = link_to "ccc_privacy_bot", "https://twitter.com/ccc_privacy_bot"
+  | で取得した企業を表示しているページです
 
 table.table.table-striped.table-bordered.table-hover
   thead
@@ -30,6 +34,12 @@ table.table.table-striped.table-bordered.table-hover
       th 提携先名称
       th 作成日時
       th 更新日時
+
+h2 リンク
+ul
+  li = link_to "Twitter", "https://twitter.com/ccc_privacy_bot"
+  li = link_to "Twilog", "http://twilog.org/ccc_privacy_bot"
+  li = link_to "GitHub", "https://github.com/sue445/ccc_privacy_crawler"
 
 h2 備考
 
