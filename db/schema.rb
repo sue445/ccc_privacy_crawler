@@ -1,4 +1,3 @@
-# encoding: UTF-8
 # This file is auto-generated from the current state of the database. Instead
 # of editing this file, please use the migrations feature of Active Record to
 # incrementally modify your database, and then regenerate this schema definition.
@@ -20,8 +19,7 @@ ActiveRecord::Schema.define(version: 20141119131622) do
     t.text     "destination_name"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.index ["company_name", "receipted_date"], name: "index_companies_on_company_name_and_receipted_date", unique: true
   end
-
-  add_index "companies", ["company_name", "receipted_date"], name: "index_companies_on_company_name_and_receipted_date", unique: true
 
 end
