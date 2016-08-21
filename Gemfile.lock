@@ -83,7 +83,7 @@ GEM
     naught (1.1.0)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
-    newrelic_rpm (3.16.0.318)
+    newrelic_rpm (3.16.1.320)
     nokogiri (1.6.8)
       mini_portile2 (~> 2.1.0)
       pkg-config (~> 1.1.7)
