@@ -8,7 +8,7 @@ GEM
       activemodel (= 5.0.0.1)
       activesupport (= 5.0.0.1)
       arel (~> 7.0)
-    activerecord-simple_index_name (0.3.0)
+    activerecord-simple_index_name (0.4.0)
       activerecord
       activesupport
     activesupport (5.0.0.1)
