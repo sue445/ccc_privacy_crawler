@@ -18,14 +18,14 @@ gem "rake"
 # Component requirements
 gem "slim"
 gem "sass"
-gem "activerecord", ">= 3.1", require: "active_record"
+gem "activerecord", "~> 5.0.1", require: "active_record"
 
 # Test requirements
 gem "rspec", group: "test"
 gem "rack-test", require: "rack/test", group: "test"
 
 # Padrino Stable Gem
-gem "padrino", "0.13.1"
+gem "padrino", "0.13.3.3"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
