@@ -2,16 +2,16 @@ GEM
   remote: https://rubygems.org/
   specs:
     Ascii85 (1.0.2)
-    activemodel (5.0.0.1)
-      activesupport (= 5.0.0.1)
-    activerecord (5.0.0.1)
-      activemodel (= 5.0.0.1)
-      activesupport (= 5.0.0.1)
+    activemodel (5.0.1)
+      activesupport (= 5.0.1)
+    activerecord (5.0.1)
+      activemodel (= 5.0.1)
+      activesupport (= 5.0.1)
       arel (~> 7.0)
     activerecord-simple_index_name (0.4.0)
       activerecord
       activesupport
-    activesupport (5.0.0.1)
+    activesupport (5.0.1)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (~> 0.7)
       minitest (~> 5.1)
@@ -149,7 +149,7 @@ GEM
       rack (>= 1.0)
     rainbow (2.1.0)
     rake (11.3.0)
-    rollbar (2.13.3)
+    rollbar (2.14.0)
       multi_json
     rspec (3.5.0)
       rspec-core (~> 3.5.0)
@@ -176,7 +176,7 @@ GEM
       ruby-progressbar (~> 1.7)
     ruby-progressbar (1.8.1)
     ruby-rc4 (0.1.5)
-    sass (3.4.22)
+    sass (3.4.23)
     simple_oauth (0.3.1)
     simplecov (0.12.0)
       docile (~> 1.1.0)
