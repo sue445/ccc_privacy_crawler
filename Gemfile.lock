@@ -198,7 +198,7 @@ GEM
     thread_safe (0.3.5)
     tilt (2.0.6)
     tins (1.13.2)
-    ttfunk (1.4.0)
+    ttfunk (1.5.0)
     twitter (6.1.0)
       addressable (~> 2.5)
       buftok (~> 0.2.0)
