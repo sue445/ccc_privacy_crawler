@@ -13,7 +13,7 @@ Tカードの [個人情報提供の停止 対象企業一覧](http://qa.tsite.j
 [![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/sue445/ccc_privacy_crawler/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
 
 ## Requirements
-* Ruby 2.3.0
+* Ruby
 
 ## Setup
 * create twitter app and generate access token
