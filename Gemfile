@@ -25,7 +25,7 @@ gem "rspec", group: "test"
 gem "rack-test", require: "rack/test", group: "test"
 
 # Padrino Stable Gem
-gem "padrino", "0.13.3.3"
+gem "padrino", "~> 0.13.3.3" # TODO: Upgrade to 0.14
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'

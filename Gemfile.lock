@@ -79,6 +79,7 @@ GEM
     moneta (0.8.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
+    mustermann (1.0.0)
     mustermann19 (0.4.4)
       enumerable-lazy
     naught (1.1.0)
@@ -231,7 +232,7 @@ DEPENDENCIES
   foreman
   mechanize
   newrelic_rpm
-  padrino (= 0.13.3.3)
+  padrino (~> 0.13.3.3)
   pdf-reader
   pg
   pry
