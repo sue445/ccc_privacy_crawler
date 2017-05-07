@@ -25,7 +25,7 @@ gem "rspec", group: "test"
 gem "rack-test", require: "rack/test", group: "test"
 
 # Padrino Stable Gem
-gem "padrino", "~> 0.13.3.3" # TODO: Upgrade to 0.14
+gem "padrino"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
@@ -41,7 +41,7 @@ gem "newrelic_rpm"
 gem "pdf-reader"
 gem "puma"
 gem "rollbar"
-gem "sinatra", "< 2.0.0" # TODO: remove this line
+gem "sinatra", "< 2.0.0" # FIXME: I think padrino doesn't supports sinatra v2.0.0 yet. https://github.com/sue445/ccc_privacy_crawler/commit/aa15cb8540669d7fa734d9c369eb85a4dcd00ff4
 gem "twitter"
 
 group :development do
