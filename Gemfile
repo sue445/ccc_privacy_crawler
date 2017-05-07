@@ -18,7 +18,7 @@ gem "rake"
 # Component requirements
 gem "slim"
 gem "sass"
-gem "activerecord", "~> 5.0.1", require: "active_record"
+gem "activerecord", require: "active_record"
 
 # Test requirements
 gem "rspec", group: "test"
