@@ -245,9 +245,13 @@ DEPENDENCIES
   rspec-temp_dir
   rubocop (= 0.36.0)
   sass
+  sinatra (< 2.0.0)
   slim
   sqlite3
   twitter
 
+RUBY VERSION
+   ruby 2.4.1p111
+
 BUNDLED WITH
-   1.13.6
+   1.14.6

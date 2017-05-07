@@ -41,6 +41,7 @@ gem "newrelic_rpm"
 gem "pdf-reader"
 gem "puma"
 gem "rollbar"
+gem "sinatra", "< 2.0.0" # TODO: remove this line
 gem "twitter"
 
 group :development do
