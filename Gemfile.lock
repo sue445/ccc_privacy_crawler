@@ -229,7 +229,7 @@ DEPENDENCIES
   foreman
   mechanize
   newrelic_rpm
-  padrino
+  padrino (= 0.14.0.1)
   pdf-reader
   pg
   pry
