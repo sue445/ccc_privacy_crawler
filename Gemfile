@@ -27,9 +27,6 @@ gem "rack-test", require: "rack/test", group: "test"
 # Padrino Stable Gem
 gem "padrino"
 
-# NOTE: padrino requires since https://github.com/padrino/padrino-framework/commit/06cb7a779ba8899723177b900eeb67c76d04c844 ?
-gem "haml"
-
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 
