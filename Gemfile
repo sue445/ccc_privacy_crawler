@@ -25,7 +25,7 @@ gem "rspec", group: "test"
 gem "rack-test", require: "rack/test", group: "test"
 
 # Padrino Stable Gem
-gem "padrino", "0.14.0.1" # TODO: Remove version after https://github.com/padrino/padrino-framework/pull/2133 is released
+gem "padrino"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
