@@ -25,7 +25,10 @@ gem "rspec", group: "test"
 gem "rack-test", require: "rack/test", group: "test"
 
 # Padrino Stable Gem
-gem "padrino", "0.14.0.1" # TODO: Remove version after https://github.com/padrino/padrino-framework/pull/2133 is released
+gem "padrino"
+
+# NOTE: padrino requires since https://github.com/padrino/padrino-framework/commit/06cb7a779ba8899723177b900eeb67c76d04c844 ?
+gem "haml"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
@@ -41,7 +44,6 @@ gem "newrelic_rpm"
 gem "pdf-reader"
 gem "puma"
 gem "rollbar"
-gem "sinatra", "< 2.0.0" # FIXME: I think padrino doesn't supports sinatra v2.0.0 yet. https://github.com/sue445/ccc_privacy_crawler/commit/aa15cb8540669d7fa734d9c369eb85a4dcd00ff4
 gem "twitter"
 
 group :development do
