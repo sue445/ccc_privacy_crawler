@@ -130,7 +130,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    pg (0.20.0)
+    pg (0.21.0)
     powerpack (0.1.1)
     pry (0.10.4)
       coderay (~> 1.1.0)
@@ -148,7 +148,7 @@ GEM
     rainbow (2.2.2)
       rake
     rake (12.0.0)
-    rollbar (2.14.1)
+    rollbar (2.15.0)
       multi_json
     rspec (3.6.0)
       rspec-core (~> 3.6.0)
