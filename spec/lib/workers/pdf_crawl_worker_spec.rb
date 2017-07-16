@@ -6,7 +6,7 @@ RSpec.describe PdfCrawlWorker do
 
     before do
       # don't tweet
-      allow_any_instance_of(Company).to receive(:notify_to_twitter)
+      allow_any_instance_of(Company).to receive(:notify_to_twitter) # rubocop:disable RSpec/AnyInstance
     end
 
     it { expect { subject }.not_to raise_error }
