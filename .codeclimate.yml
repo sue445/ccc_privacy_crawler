@@ -1,3 +1,8 @@
+engines:
+  rubocop:
+    # NOTE: onkcop is not installed at codeclimate
+    enabled: false
+
 exclude_paths:
   - public/javascripts/bootstrap.js
   - public/javascripts/bootstrap.min.js

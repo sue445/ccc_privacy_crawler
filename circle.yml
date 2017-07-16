@@ -6,6 +6,7 @@ machine:
   # Add some environment variables
   environment:
     COVERAGE: true
+    RACK_ENV: test
 
 ## Customize dependencies
 #dependencies:
@@ -15,12 +16,13 @@ database:
   override:
     # replace CircleCI's generated database.yml
     - cp spec/circle_ci/database.yml.postgresql config/database.yml
-    - RACK_ENV=test bundle exec rake ar:migrate:reset
+    - bundle exec rake ar:migrate:reset
 
 ## Customize test commands
 test:
   override:
-    - RACK_ENV=test bundle exec rspec
+    - bundle exec rspec
+    - bundle exec rubocop
 
 ## Customize deployment commands
 deployment:

@@ -49,7 +49,7 @@ class PdfCrawlWorker
         no:               matched_data[:no].to_i,
         company_name:     matched_data[:company_name].strip,
         receipted_date:   matched_data[:receipted_date].strip,
-        destination_name: matched_data[:destination_name].strip
+        destination_name: matched_data[:destination_name].strip,
       )
     end
 

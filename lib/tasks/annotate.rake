@@ -8,6 +8,6 @@ task :annotate => :environment do
     exclude_factories: true,
     exclude_tests:     true,
     show_indexes:      true,
-    format_markdown:   false
+    format_markdown:   false,
   )
 end

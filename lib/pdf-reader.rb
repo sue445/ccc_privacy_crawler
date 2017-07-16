@@ -1,4 +1,4 @@
-# rubocop:disable Style/ClassAndModuleChildren
+# rubocop:disable Style/FileName
 require "pdf/reader"
 
 class PDF::Reader::PageLayout
