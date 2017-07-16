@@ -44,7 +44,7 @@ RSpec.describe Company do
   describe "#notify_to_twitter" do
     let(:company) { create(:company) }
 
-    it "should post tweet" do
+    it "posts tweet" do
       begin
         company.notify_to_twitter
       rescue Twitter::Error => e
