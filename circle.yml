@@ -21,6 +21,7 @@ database:
 test:
   override:
     - RACK_ENV=test bundle exec rspec
+    - bundle exec rubocop
 
 ## Customize deployment commands
 deployment:
