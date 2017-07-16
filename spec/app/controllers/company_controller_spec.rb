@@ -1,6 +1,6 @@
 require "spec_helper"
 
-RSpec.describe "/company" do
+RSpec.describe "/company" do # rubocop:disable RSpec/DescribeClass
   describe "get /" do
     before do
       create_list(:company, 5)
