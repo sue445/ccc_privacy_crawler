@@ -47,7 +47,7 @@ group :development do
   gem "annotate"
   gem "dotenv", group: :test
   gem "foreman"
-  gem "rubocop", "0.36.0"
+  gem "onkcop", require: false
   gem "pry", group: :test
   gem "pry-nav", group: :test
   gem "sqlite3", group: :test
