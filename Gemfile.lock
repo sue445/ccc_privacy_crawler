@@ -76,7 +76,7 @@ GEM
     method_source (0.8.2)
     mime-types (2.99.3)
     mini_portile2 (2.2.0)
-    minitest (5.10.2)
+    minitest (5.10.3)
     moneta (0.8.1)
     multi_json (1.12.1)
     multipart-post (2.0.0)
@@ -265,9 +265,6 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
-
-RUBY VERSION
-   ruby 2.4.1p111
 
 BUNDLED WITH
    1.14.6
