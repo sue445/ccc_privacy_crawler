@@ -41,7 +41,7 @@ GEM
     dotenv (2.2.1)
     enumerable-lazy (0.0.2)
     equalizer (0.0.11)
-    factory_girl (4.8.0)
+    factory_girl (4.8.1)
       activesupport (>= 3.0.0)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
@@ -86,7 +86,7 @@ GEM
     naught (1.1.0)
     net-http-digest_auth (1.4.1)
     net-http-persistent (2.9.4)
-    newrelic_rpm (4.4.0.336)
+    newrelic_rpm (4.5.0.337)
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
@@ -185,7 +185,7 @@ GEM
       unicode-display_width (~> 1.0, >= 1.0.1)
     rubocop-rspec (1.16.0)
       rubocop (>= 0.49.0)
-    ruby-progressbar (1.8.3)
+    ruby-progressbar (1.9.0)
     ruby-rc4 (0.1.5)
     sass (3.5.1)
       sass-listen (~> 4.0.0)
@@ -265,9 +265,6 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
-
-RUBY VERSION
-   ruby 2.4.1p111
 
 BUNDLED WITH
    1.15.4
