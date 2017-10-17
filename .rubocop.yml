@@ -13,3 +13,7 @@ AllCops:
 
 Lint/ScriptPermission:
   Enabled: false
+
+Naming/FileName:
+  Exclude:
+    - lib/pdf-reader.rb

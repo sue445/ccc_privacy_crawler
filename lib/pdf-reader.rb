@@ -1,4 +1,3 @@
-# rubocop:disable Style/FileName
 require "pdf/reader"
 
 module PdfReaderExt
