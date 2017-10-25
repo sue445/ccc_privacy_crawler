@@ -41,7 +41,7 @@ GEM
     dotenv (2.2.1)
     enumerable-lazy (0.0.2)
     equalizer (0.0.11)
-    factory_girl (4.9.0)
+    factory_bot (4.8.2)
       activesupport (>= 3.0.0)
     faraday (0.11.0)
       multipart-post (>= 1.2, < 3)
@@ -245,7 +245,7 @@ DEPENDENCIES
   coveralls
   database_rewinder
   dotenv
-  factory_girl
+  factory_bot
   foreman
   mechanize
   newrelic_rpm
@@ -266,6 +266,9 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
+
+RUBY VERSION
+   ruby 2.4.1p111
 
 BUNDLED WITH
    1.15.4

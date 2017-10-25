@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   factory :company do
     sequence(:no)    { |n| n }
     company_name     { generate :random_str }

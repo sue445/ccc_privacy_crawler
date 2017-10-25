@@ -56,7 +56,7 @@ end
 group :test do
   gem "coveralls", require: false
   gem "database_rewinder"
-  gem "factory_girl"
+  gem "factory_bot"
   gem "rspec-its"
   gem "rspec-temp_dir"
 end

@@ -10,13 +10,13 @@ Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&
 require "database_rewinder"
 require "rspec/its"
 require "rspec/temp_dir"
-require "factory_girl"
+require "factory_bot"
 
-# cf. https://github.com/thoughtbot/factory_girl/wiki/Installation#padrino-installation
-FactoryGirl.definition_file_paths = [
+# cf. https://github.com/thoughtbot/factory_bot/wiki/Installation#padrino-installation
+FactoryBot.definition_file_paths = [
   File.join(Padrino.root, "spec", "factories"),
 ]
-FactoryGirl.find_definitions
+FactoryBot.find_definitions
 
 Dir["#{__dir__}/support/**/*.rb"].sort.each { |f| require f }
 
@@ -98,7 +98,7 @@ RSpec.configure do |config|
   config.order = :random
 
   config.include Rack::Test::Methods
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.before :suite do
     DatabaseRewinder.clean_all
