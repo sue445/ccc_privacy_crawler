@@ -10,9 +10,9 @@ Dir[File.expand_path(File.dirname(__FILE__) + "/../app/helpers/**/*.rb")].each(&
 require "database_rewinder"
 require "rspec/its"
 require "rspec/temp_dir"
-require "factory_girl"
+require "factory_bot"
 
-# cf. https://github.com/thoughtbot/factory_girl/wiki/Installation#padrino-installation
+# cf. https://github.com/thoughtbot/factory_bot/wiki/Installation#padrino-installation
 FactoryGirl.definition_file_paths = [
   File.join(Padrino.root, "spec", "factories"),
 ]
