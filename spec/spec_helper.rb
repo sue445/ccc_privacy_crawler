@@ -13,10 +13,10 @@ require "rspec/temp_dir"
 require "factory_bot"
 
 # cf. https://github.com/thoughtbot/factory_bot/wiki/Installation#padrino-installation
-FactoryGirl.definition_file_paths = [
+FactoryBot.definition_file_paths = [
   File.join(Padrino.root, "spec", "factories"),
 ]
-FactoryGirl.find_definitions
+FactoryBot.find_definitions
 
 Dir["#{__dir__}/support/**/*.rb"].sort.each { |f| require f }
 
@@ -98,7 +98,7 @@ RSpec.configure do |config|
   config.order = :random
 
   config.include Rack::Test::Methods
-  config.include FactoryGirl::Syntax::Methods
+  config.include FactoryBot::Syntax::Methods
 
   config.before :suite do
     DatabaseRewinder.clean_all

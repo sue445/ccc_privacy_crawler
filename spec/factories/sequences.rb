@@ -1,4 +1,4 @@
-FactoryGirl.define do
+FactoryBot.define do
   sequence(:random_int) { rand(1..100000) }
 
   sequence(:random_str) do
