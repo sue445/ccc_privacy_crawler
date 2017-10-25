@@ -48,8 +48,7 @@ group :development do
   gem "dotenv", group: :test
   gem "foreman"
   gem "onkcop", require: false
-  gem "pry", group: :test
-  gem "pry-nav", group: :test
+  gem "pry-byebug", group: :test
   gem "sqlite3", group: :test
 end
 
