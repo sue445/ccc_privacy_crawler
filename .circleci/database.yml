@@ -4,4 +4,5 @@ test:
   database: circle_test
   pool: 5
   username: ubuntu
+  host: localhost
   # password: root
