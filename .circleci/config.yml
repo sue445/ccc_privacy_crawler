@@ -73,9 +73,7 @@ jobs:
           fingerprints:
             - "a7:63:6a:b6:85:fc:f7:d3:1b:da:5a:bf:bf:dd:e1:97"
       - run: .circleci/notify_to_slack.sh "Heroku Deploy" "Deploy start"
-      - run: heroku config:add BUNDLE_WITHOUT="test:development" --app $HEROKU_APP_NAME
-      - run: git push git@heroku.com:$HEROKU_APP_NAME.git $CIRCLE_SHA1:refs/heads/master
-      - run: heroku run rake ar:migrate --app $HEROKU_APP_NAME
+      - run: .circleci/heroku_deploy.sh
       - run: .circleci/notify_to_slack.sh "Heroku Deploy" "Deploy successful"
 
 workflows:
