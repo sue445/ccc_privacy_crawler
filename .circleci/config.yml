@@ -9,7 +9,6 @@ default: &default
       - POSTGRES_DB=circle_test
   working_directory: ~/app
   environment:
-    COVERAGE: true
     RACK_ENV: test
 
 jobs:

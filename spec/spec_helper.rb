@@ -1,4 +1,4 @@
-if ENV["COVERAGE"]
+if ENV["CI"]
   require "coveralls"
   Coveralls.wear!
 end
