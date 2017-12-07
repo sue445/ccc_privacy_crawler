@@ -68,7 +68,7 @@ jobs:
     steps:
       - restore_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - run: .circleci/setup-heroku.sh
+      - run: .circleci/heroku_setup.sh
       - add_ssh_keys:
           fingerprints:
             - "a7:63:6a:b6:85:fc:f7:d3:1b:da:5a:bf:bf:dd:e1:97"
