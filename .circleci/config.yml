@@ -29,7 +29,9 @@ jobs:
       - restore_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
-          key: v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
+          keys:
+            - v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
+            - v1-bundle-master
       - run: bundle install --path vendor/bundle
       - run: bundle clean
       - save_cache:
