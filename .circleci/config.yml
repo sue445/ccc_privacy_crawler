@@ -3,13 +3,13 @@ version: 2.0
 default: &default
   docker:
     - image: circleci/ruby:2.4.1-node
+      environment:
+        RACK_ENV: test
     - image: circleci/postgres:9.4.12-alpine
       environment:
-      - POSTGRES_USER=ubuntu
-      - POSTGRES_DB=circle_test
+        POSTGRES_USER: ubuntu
+        POSTGRES_DB: circle_test
   working_directory: ~/app
-  environment:
-    RACK_ENV: test
 
 jobs:
   checkout_code:
