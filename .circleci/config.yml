@@ -3,14 +3,13 @@ version: 2.0
 default: &default
   docker:
     - image: circleci/ruby:2.4.1-node
+      environment:
+        RACK_ENV: test
     - image: circleci/postgres:9.4.12-alpine
       environment:
-      - POSTGRES_USER=ubuntu
-      - POSTGRES_DB=circle_test
+        POSTGRES_USER: ubuntu
+        POSTGRES_DB: circle_test
   working_directory: ~/app
-  environment:
-    COVERAGE: true
-    RACK_ENV: test
 
 jobs:
   checkout_code:
@@ -30,7 +29,9 @@ jobs:
       - restore_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
       - restore_cache:
-          key: v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
+          keys:
+            - v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
+            - v1-bundle-master
       - run: bundle install --path vendor/bundle
       - run: bundle clean
       - save_cache:
@@ -68,14 +69,12 @@ jobs:
     steps:
       - restore_cache:
           key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
-      - run: .circleci/setup-heroku.sh
+      - run: .circleci/heroku_setup.sh
       - add_ssh_keys:
           fingerprints:
             - "a7:63:6a:b6:85:fc:f7:d3:1b:da:5a:bf:bf:dd:e1:97"
       - run: .circleci/notify_to_slack.sh "Heroku Deploy" "Deploy start"
-      - run: heroku config:add BUNDLE_WITHOUT="test:development" --app $HEROKU_APP_NAME
-      - run: git push git@heroku.com:$HEROKU_APP_NAME.git $CIRCLE_SHA1:refs/heads/master
-      - run: heroku run rake ar:migrate --app $HEROKU_APP_NAME
+      - run: .circleci/heroku_deploy.sh
       - run: .circleci/notify_to_slack.sh "Heroku Deploy" "Deploy successful"
 
 workflows:
