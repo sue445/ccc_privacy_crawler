@@ -1,6 +1,6 @@
 source "https://rubygems.org"
 
-ruby "2.4.1"
+ruby "2.4.3"
 
 # Distribute your app as a gem
 # gemspec
