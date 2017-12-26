@@ -8,7 +8,7 @@ FactoryBot.define do
   end
 
   sequence(:random_ymd) do
-    diff_day = 150 - rand(365)
+    diff_day = rand(-214..150)
     date = Date.today + diff_day
     date.strftime("%Y/%m/%d")
   end
