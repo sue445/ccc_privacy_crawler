@@ -46,9 +46,9 @@ RSpec.describe Company do
 
     it "posts tweet" do
       
-        company.notify_to_twitter
-      rescue Twitter::Error => e
-        puts e.message
+      company.notify_to_twitter
+    rescue Twitter::Error => e
+      puts e.message
       
     end
   end
