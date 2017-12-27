@@ -17,3 +17,36 @@ Lint/ScriptPermission:
 Naming/FileName:
   Exclude:
     - lib/pdf-reader.rb
+
+# When apply Style/RedundantBegin, Layout/RescueEnsureAlignment raise error :innocent:
+#
+# ```ruby
+#   describe "#notify_to_twitter" do
+#     let(:company) { create(:company) }
+#
+#     it "posts tweet" do
+#       company.notify_to_twitter
+#     rescue Twitter::Error => e
+#       puts e.message
+#     end
+#   end
+# ```
+#
+# ```
+# $ be rubocop
+# Inspecting 28 files
+# ........................An error occurred while Layout/RescueEnsureAlignment cop was inspecting /Users/sue445/dev/workspace/github.com/sue445/ccc_privacy_crawler/spec/models/company_spec.rb:49:4.
+# To see the complete backtrace run rubocop -d.
+# ....
+#
+# 28 files inspected, no offenses detected
+#
+# 1 error occurred:
+# An error occurred while Layout/RescueEnsureAlignment cop was inspecting /Users/sue445/dev/workspace/github.com/sue445/ccc_privacy_crawler/spec/models/company_spec.rb:49:4.
+# Errors are usually caused by RuboCop bugs.
+# Please, report your problems to RuboCop's issue tracker.
+# Mention the following information in the issue report:
+# 0.52.0 (using Parser 2.4.0.2, running on ruby 2.5.0 x86_64-darwin13)
+# ```
+Style/RedundantBegin:
+  Enabled: false
