@@ -2,7 +2,7 @@ version: 2.0
 
 default: &default
   docker:
-    - image: circleci/ruby:2.4.3-node
+    - image: circleci/ruby:2.5.0-node
       environment:
         RACK_ENV: test
     - image: circleci/postgres:9.4.12-alpine
