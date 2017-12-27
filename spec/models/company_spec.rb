@@ -45,11 +45,11 @@ RSpec.describe Company do
     let(:company) { create(:company) }
 
     it "posts tweet" do
-      
+
       company.notify_to_twitter
     rescue Twitter::Error => e
       puts e.message
-      
+
     end
   end
 end
