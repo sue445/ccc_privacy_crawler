@@ -79,7 +79,7 @@ GEM
     mini_portile2 (2.3.0)
     minitest (5.11.1)
     moneta (1.0.0)
-    multi_json (1.13.0)
+    multi_json (1.13.1)
     multipart-post (2.0.0)
     mustermann (1.0.1)
     mustermann19 (0.4.4)
@@ -91,9 +91,9 @@ GEM
     nokogiri (1.8.1)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
-    onkcop (0.52.1.0)
+    onkcop (0.52.1.1)
       rubocop (~> 0.52.1)
-      rubocop-rspec (>= 1.21.0)
+      rubocop-rspec (>= 1.22.0)
     padrino (0.14.2)
       padrino-admin (= 0.14.2)
       padrino-cache (= 0.14.2)
@@ -183,8 +183,8 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.21.0)
-      rubocop (>= 0.52.0)
+    rubocop-rspec (1.22.0)
+      rubocop (>= 0.52.1)
     ruby-progressbar (1.9.0)
     ruby-rc4 (0.1.5)
     sass (3.5.5)
@@ -251,7 +251,7 @@ DEPENDENCIES
   onkcop
   padrino
   pdf-reader
-  pg
+  pg (< 1.0.0)
   pry-byebug
   puma
   rack-test
@@ -264,6 +264,9 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
+
+RUBY VERSION
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1
