@@ -136,7 +136,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    pg (1.0.0)
+    pg (0.21.0)
     powerpack (0.1.1)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -251,7 +251,7 @@ DEPENDENCIES
   onkcop
   padrino
   pdf-reader
-  pg
+  pg (< 1.0.0)
   pry-byebug
   puma
   rack-test
@@ -264,6 +264,9 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
+
+RUBY VERSION
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1

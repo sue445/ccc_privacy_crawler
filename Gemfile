@@ -61,5 +61,6 @@ group :test do
 end
 
 group :production do
-  gem "pg", group: :test
+  # TODO: Remove version lock when activerecord v5.1.5+ is released
+  gem "pg", "< 1.0.0", group: :test
 end
