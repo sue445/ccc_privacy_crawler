@@ -146,6 +146,8 @@ GEM
       pry (~> 0.10)
     public_suffix (3.0.1)
     puma (3.11.2)
+    puma-heroku (1.0.0)
+      puma (~> 3.0)
     rack (2.0.3)
     rack-protection (2.0.0)
       rack
@@ -254,6 +256,7 @@ DEPENDENCIES
   pg (< 1.0.0)
   pry-byebug
   puma
+  puma-heroku
   rack-test
   rake
   rollbar
@@ -264,6 +267,9 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
+
+RUBY VERSION
+   ruby 2.5.0p0
 
 BUNDLED WITH
    1.16.1
