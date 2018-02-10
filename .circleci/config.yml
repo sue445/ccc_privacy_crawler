@@ -75,9 +75,7 @@ jobs:
       - add_ssh_keys:
           fingerprints:
             - "a7:63:6a:b6:85:fc:f7:d3:1b:da:5a:bf:bf:dd:e1:97"
-      - run: .circleci/notify_to_slack.sh "Heroku Deploy" "Deploy start"
       - run: .circleci/heroku_deploy.sh
-      - run: .circleci/notify_to_slack.sh "Heroku Deploy" "Deploy successful"
 
 workflows:
   version: 2
