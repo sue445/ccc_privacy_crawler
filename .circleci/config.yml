@@ -64,7 +64,9 @@ jobs:
       - run: bundle exec rubocop
 
   deploy:
-    <<: *default
+    docker:
+      - image: sue445/heroku-cli
+    working_directory: /home/circleci/app
 
     steps:
       - restore_cache:
