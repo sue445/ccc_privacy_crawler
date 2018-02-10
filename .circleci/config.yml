@@ -11,6 +11,14 @@ default: &default
         POSTGRES_DB: circle_test
   working_directory: ~/app
 
+restore_repo_cache_option: &restore_repo_cache_option
+  key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+
+restore_bundle_cache_option: &restore_bundle_cache_option
+  keys:
+    - v1-bundle-{{ checksum "Gemfile.lock" }}
+    - v1-bundle
+
 jobs:
   checkout_code:
     <<: *default
@@ -27,15 +35,12 @@ jobs:
 
     steps:
       - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          <<: *restore_repo_cache_option
       - restore_cache:
-          keys:
-            - v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
-            - v1-bundle-master
-      - run: bundle install --path vendor/bundle
-      - run: bundle clean
+          <<: *restore_bundle_cache_option
+      - run: .circleci/setup_bundle.sh
       - save_cache:
-          key: v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
+          key: v1-bundle-{{ checksum "Gemfile.lock" }}
           paths:
             - ~/app/vendor/bundle
 
@@ -44,10 +49,10 @@ jobs:
 
     steps:
       - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          <<: *restore_repo_cache_option
       - restore_cache:
-          key: v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
-      - run: bundle --path vendor/bundle
+          <<: *restore_bundle_cache_option
+      - run: .circleci/setup_bundle.sh
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
@@ -57,10 +62,10 @@ jobs:
 
     steps:
       - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          <<: *restore_repo_cache_option
       - restore_cache:
-          key: v1-bundle-{{ .Environment.CIRCLE_BRANCH }}
-      - run: bundle --path vendor/bundle
+          <<: *restore_bundle_cache_option
+      - run: .circleci/setup_bundle.sh
       - run: bundle exec rubocop
 
   deploy:
@@ -70,7 +75,7 @@ jobs:
 
     steps:
       - restore_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          <<: *restore_repo_cache_option
       - run: .circleci/heroku_setup.sh
       - add_ssh_keys:
           fingerprints:
