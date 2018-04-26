@@ -5,6 +5,7 @@ module CccPrivacyCrawler
     module CompanyHelper
       def jst(time)
         return unless time
+
         l Time.zone.at(time.to_i)
       end
     end
