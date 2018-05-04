@@ -25,7 +25,10 @@ gem "rack-test", require: "rack/test", group: "test"
 gem "rspec", group: "test"
 
 # Padrino Stable Gem
-gem "padrino"
+# gem "padrino"
+
+# TODO: use rubygems.org gem when https://github.com/padrino/padrino-framework/pull/2182 is merged
+gem "padrino", github: "sue445/padrino-framework", branch: "activerecord_5.2", ref: "faf9bec"
 
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
