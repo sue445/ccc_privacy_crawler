@@ -47,6 +47,7 @@ Padrino::Logger::Config[:test][:log_level] = :info
 #
 Padrino.before_load do
   Dotenv.load unless Padrino.env == :production
+  require "active_support/all"
   Time.zone = "Tokyo"
 end
 
