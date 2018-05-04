@@ -16,8 +16,7 @@ ruby "2.5.1"
 gem "rake"
 
 # Component requirements
-# NOTE: ar:migrate doesn't work at activerecord v5.2
-gem "activerecord", "~> 5.1.5", require: "active_record"
+gem "activerecord", ">= 5.2.0", require: "active_record"
 gem "sass"
 gem "slim"
 
