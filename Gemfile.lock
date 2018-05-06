@@ -1,5 +1,5 @@
 GIT
-  remote: git://github.com/padrino/padrino-framework.git
+  remote: https://github.com/padrino/padrino-framework.git
   revision: c27107001bb66c9144917dd146dac1ab7bcf7b24
   ref: c271070
   branch: master
