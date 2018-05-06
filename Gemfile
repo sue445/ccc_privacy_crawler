@@ -27,11 +27,11 @@ gem "rspec", group: "test"
 # Padrino Stable Gem
 # gem "padrino"
 
-# TODO: use rubygems.org gem when https://github.com/padrino/padrino-framework/pull/2182 is merged
-gem "padrino", github: "sue445/padrino-framework", branch: "activerecord_5.2", ref: "faf9bec"
-
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
+
+# TODO: use rubygems.org gem when padrino v0.14.4+ is released
+gem "padrino", github: "padrino/padrino-framework", branch: "master", ref: "c271070"
 
 # Or Individual Gems
 # %w(core support gen helpers cache mailer admin).each do |g|

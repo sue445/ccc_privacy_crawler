@@ -1,8 +1,8 @@
 GIT
-  remote: git://github.com/sue445/padrino-framework.git
-  revision: faf9becab40446346f405b9fda55538a7461a86a
-  ref: faf9bec
-  branch: activerecord_5.2
+  remote: git://github.com/padrino/padrino-framework.git
+  revision: c27107001bb66c9144917dd146dac1ab7bcf7b24
+  ref: c271070
+  branch: master
   specs:
     padrino (0.14.3)
       padrino-admin (= 0.14.3)
