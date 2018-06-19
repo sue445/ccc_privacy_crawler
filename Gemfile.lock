@@ -83,7 +83,7 @@ GEM
     factory_bot (4.10.0)
       activesupport (>= 3.0.0)
     ffi (1.9.25)
-    foreman (0.84.0)
+    foreman (0.85.0)
       thor (~> 0.19.1)
     hashery (2.1.2)
     http (3.3.0)
