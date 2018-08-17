@@ -12,12 +12,12 @@ default: &default
   working_directory: ~/app
 
 restore_repo_cache_option: &restore_repo_cache_option
-  key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+  key: v2-repo-{{ .Environment.CIRCLE_SHA1 }}
 
 restore_bundle_cache_option: &restore_bundle_cache_option
   keys:
-    - v1-bundle-{{ checksum "Gemfile.lock" }}
-    - v1-bundle
+    - v2-bundle-{{ checksum "Gemfile.lock" }}
+    - v2-bundle
 
 jobs:
   checkout_code:
@@ -26,7 +26,7 @@ jobs:
     steps:
       - checkout
       - save_cache:
-          key: v1-repo-{{ .Environment.CIRCLE_SHA1 }}
+          key: v2-repo-{{ .Environment.CIRCLE_SHA1 }}
           paths:
             - ~/app
 
@@ -40,7 +40,7 @@ jobs:
           <<: *restore_bundle_cache_option
       - run: .circleci/setup_bundle.sh
       - save_cache:
-          key: v1-bundle-{{ checksum "Gemfile.lock" }}
+          key: v2-bundle-{{ checksum "Gemfile.lock" }}
           paths:
             - ~/app/vendor/bundle
 
