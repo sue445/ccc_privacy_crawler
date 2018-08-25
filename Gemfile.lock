@@ -141,7 +141,7 @@ GEM
       hashery (~> 2.0)
       ruby-rc4
       ttfunk
-    pg (1.0.0)
+    pg (1.1.0)
     powerpack (0.1.2)
     pry (0.11.3)
       coderay (~> 1.1.0)
@@ -191,7 +191,7 @@ GEM
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (~> 1.0, >= 1.0.1)
-    rubocop-rspec (1.28.0)
+    rubocop-rspec (1.29.0)
       rubocop (>= 0.58.0)
     ruby-progressbar (1.10.0)
     ruby-rc4 (0.1.5)
