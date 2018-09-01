@@ -11,8 +11,10 @@ default: &default
         POSTGRES_DB: circle_test
   working_directory: ~/app
 
-restore_repo_cache_option: &restore_repo_cache_option
-  key: v2-repo-{{ .Environment.CIRCLE_SHA1 }}
+save_bundle_cache_option: &save_bundle_cache_option
+  key: v2-bundle-{{ checksum "Gemfile.lock" }}
+  paths:
+  - ~/app/vendor/bundle
 
 restore_bundle_cache_option: &restore_bundle_cache_option
   keys:
@@ -20,39 +22,16 @@ restore_bundle_cache_option: &restore_bundle_cache_option
     - v2-bundle
 
 jobs:
-  checkout_code:
-    <<: *default
-
-    steps:
-      - checkout
-      - save_cache:
-          key: v2-repo-{{ .Environment.CIRCLE_SHA1 }}
-          paths:
-            - ~/app
-
-  bundle_dependencies:
-    <<: *default
-
-    steps:
-      - restore_cache:
-          <<: *restore_repo_cache_option
-      - restore_cache:
-          <<: *restore_bundle_cache_option
-      - run: .circleci/setup_bundle.sh
-      - save_cache:
-          key: v2-bundle-{{ checksum "Gemfile.lock" }}
-          paths:
-            - ~/app/vendor/bundle
-
   rspec:
     <<: *default
 
     steps:
-      - restore_cache:
-          <<: *restore_repo_cache_option
+      - checkout
       - restore_cache:
           <<: *restore_bundle_cache_option
       - run: .circleci/setup_bundle.sh
+      - save_cache:
+          <<: *save_bundle_cache_option
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
@@ -61,19 +40,19 @@ jobs:
     <<: *default
 
     steps:
-      - restore_cache:
-          <<: *restore_repo_cache_option
+      - checkout
       - restore_cache:
           <<: *restore_bundle_cache_option
       - run: .circleci/setup_bundle.sh
+      - save_cache:
+          <<: *save_bundle_cache_option
       - run: bundle exec rubocop
 
   deploy:
     <<: *default
 
     steps:
-      - restore_cache:
-          <<: *restore_repo_cache_option
+      - checkout
       - run: .circleci/heroku_setup.sh
       - add_ssh_keys:
           fingerprints:
@@ -85,16 +64,8 @@ workflows:
 
   build-and-deploy:
     jobs:
-      - checkout_code
-      - bundle_dependencies:
-          requires:
-            - checkout_code
-      - rspec:
-          requires:
-            - bundle_dependencies
-      - rubocop:
-          requires:
-            - bundle_dependencies
+      - rspec
+      - rubocop
       - deploy:
           requires:
             - rspec
