@@ -126,7 +126,7 @@ GEM
     net-http-persistent (3.0.0)
       connection_pool (~> 2.2)
     newrelic_rpm (5.4.0.347)
-    nokogiri (1.8.4)
+    nokogiri (1.8.5)
       mini_portile2 (~> 2.3.0)
     ntlm-http (0.1.1)
     onkcop (0.53.0.1)
