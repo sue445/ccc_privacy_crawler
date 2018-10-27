@@ -11,6 +11,9 @@ AllCops:
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
 
+Layout/AlignHash:
+  EnforcedColonStyle: table
+
 Lint/ScriptPermission:
   Enabled: false
 
