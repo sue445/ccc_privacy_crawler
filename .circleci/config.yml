@@ -67,6 +67,7 @@ workflows:
       - rspec
       - rubocop
       - deploy:
+          context: Heroku
           requires:
             - rspec
             - rubocop
