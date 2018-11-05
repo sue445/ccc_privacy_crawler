@@ -32,8 +32,7 @@ gem "rspec", group: "test"
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 
-# TODO: use rubygems.org gem when padrino v0.14.4+ is released
-gem "padrino", github: "padrino/padrino-framework", branch: "master", ref: "c271070"
+gem "padrino", ">= 0.14.4"
 
 # Or Individual Gems
 # %w(core support gen helpers cache mailer admin).each do |g|
