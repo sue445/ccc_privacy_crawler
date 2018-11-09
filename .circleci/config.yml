@@ -1,63 +1,43 @@
-version: 2.0
+version: 2.1
 
-default: &default
-  docker:
-    - image: circleci/ruby:2.5.3
-      environment:
-        RACK_ENV: test
-    - image: circleci/postgres:9.4.12-alpine
-      environment:
-        POSTGRES_USER: ubuntu
-        POSTGRES_DB: circle_test
-  working_directory: ~/app
+orbs:
+  ruby-orbs: sue445/ruby-orbs@volatile
+  heroku:    circleci/heroku@0.0.2
 
-save_bundle_cache_option: &save_bundle_cache_option
-  key: v2-bundle-{{ checksum "Gemfile.lock" }}
-  paths:
-  - ~/app/vendor/bundle
-
-restore_bundle_cache_option: &restore_bundle_cache_option
-  keys:
-    - v2-bundle-{{ checksum "Gemfile.lock" }}
-    - v2-bundle
+executors:
+  default:
+    docker:
+      - image: circleci/ruby:2.5.3
+        environment:
+          RACK_ENV: test
+      - image: circleci/postgres:9.4.12-alpine
+        environment:
+          POSTGRES_USER: ubuntu
+          POSTGRES_DB: circle_test
+    working_directory: ~/app
 
 jobs:
   rspec:
-    <<: *default
+    executor:
+      name: default
 
     steps:
       - checkout
-      - restore_cache:
-          <<: *restore_bundle_cache_option
-      - run: .circleci/setup_bundle.sh
-      - save_cache:
-          <<: *save_bundle_cache_option
+      - ruby-orbs/bundle-install:
+          cache_key_prefix: "v2-bundle"
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
 
   rubocop:
-    <<: *default
+    executor:
+      name: default
 
     steps:
       - checkout
-      - restore_cache:
-          <<: *restore_bundle_cache_option
-      - run: .circleci/setup_bundle.sh
-      - save_cache:
-          <<: *save_bundle_cache_option
+      - ruby-orbs/bundle-install:
+          cache_key_prefix: "v2-bundle"
       - run: bundle exec rubocop
-
-  deploy:
-    <<: *default
-
-    steps:
-      - checkout
-      - run: .circleci/heroku_setup.sh
-      - add_ssh_keys:
-          fingerprints:
-            - "a7:63:6a:b6:85:fc:f7:d3:1b:da:5a:bf:bf:dd:e1:97"
-      - run: .circleci/heroku_deploy.sh
 
 workflows:
   version: 2
@@ -66,7 +46,11 @@ workflows:
     jobs:
       - rspec
       - rubocop
-      - deploy:
+      - heroku/deploy-via-git:
+          pre-deploy:
+            - run: heroku config:add BUNDLE_WITHOUT="test:development" --app $HEROKU_APP_NAME
+          post-deploy:
+            - run: heroku run rake ar:migrate --app $HEROKU_APP_NAME
           context: Heroku
           requires:
             - rspec
