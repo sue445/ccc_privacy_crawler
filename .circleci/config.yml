@@ -47,8 +47,6 @@ workflows:
       - rspec
       - rubocop
       - heroku/deploy-via-git:
-          post-deploy:
-            - run: heroku run rake ar:migrate --app $HEROKU_APP_NAME
           context: Heroku
           requires:
             - rspec
