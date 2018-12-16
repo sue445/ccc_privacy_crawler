@@ -27,7 +27,7 @@ GEM
     buftok (0.2.0)
     byebug (10.0.2)
     coderay (1.1.2)
-    concurrent-ruby (1.1.3)
+    concurrent-ruby (1.1.4)
     connection_pool (2.2.2)
     coveralls (0.8.22)
       json (>= 1.8, < 3)
@@ -158,7 +158,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.9.10)
       ffi (>= 0.5.0, < 2)
-    rollbar (2.18.1)
+    rollbar (2.18.2)
       multi_json
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
