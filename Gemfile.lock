@@ -156,8 +156,8 @@ GEM
     rainbow (3.0.0)
     rake (12.3.2)
     rb-fsevent (0.10.3)
-    rb-inotify (0.9.10)
-      ffi (>= 0.5.0, < 2)
+    rb-inotify (0.10.0)
+      ffi (~> 1.0)
     rollbar (2.18.2)
       multi_json
     rspec (3.8.0)
