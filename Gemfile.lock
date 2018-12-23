@@ -234,7 +234,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.5)
-    unicode-display_width (1.4.0)
+    unicode-display_width (1.4.1)
     webrobots (0.1.2)
 
 PLATFORMS
