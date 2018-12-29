@@ -24,7 +24,7 @@ jobs:
     steps:
       - checkout
       - ruby-orbs/bundle-install:
-          cache_key_prefix: "v2-bundle"
+          cache_key_prefix: "v3-bundle"
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
@@ -36,7 +36,7 @@ jobs:
     steps:
       - checkout
       - ruby-orbs/bundle-install:
-          cache_key_prefix: "v2-bundle"
+          cache_key_prefix: "v3-bundle"
       - run: bundle exec rubocop
 
 workflows:
