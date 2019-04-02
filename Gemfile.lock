@@ -148,7 +148,7 @@ GEM
     puma (3.12.1)
     puma-heroku (1.0.0)
       puma (~> 3.0)
-    rack (2.0.6)
+    rack (2.0.7)
     rack-protection (2.0.5)
       rack
     rack-test (1.1.0)
