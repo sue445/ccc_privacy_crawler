@@ -54,6 +54,7 @@ group :development do
   gem "foreman"
   gem "onkcop", require: false
   gem "pry-byebug", group: :test
+  gem "rubocop-performance", require: false
   gem "sqlite3", group: :test
 end
 
