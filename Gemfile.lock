@@ -1,3 +1,12 @@
+GIT
+  remote: https://github.com/sue445/onkcop.git
+  revision: 6256494c1f860f62df6a4d57c81a4c200beee53b
+  branch: rubocop_0.68.0
+  specs:
+    onkcop (0.53.0.3)
+      rubocop (>= 0.53.0)
+      rubocop-rspec (>= 1.24.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -93,9 +102,6 @@ GEM
     nokogiri (1.10.3)
       mini_portile2 (~> 2.4.0)
     ntlm-http (0.1.1)
-    onkcop (0.53.0.3)
-      rubocop (>= 0.53.0)
-      rubocop-rspec (>= 1.24.0)
     padrino (0.14.4)
       padrino-admin (= 0.14.4)
       padrino-cache (= 0.14.4)
@@ -143,7 +149,6 @@ GEM
     pry-byebug (3.7.0)
       byebug (~> 11.0)
       pry (~> 0.10)
-    psych (3.1.0)
     public_suffix (3.0.3)
     puma (3.12.1)
     puma-heroku (1.0.0)
@@ -178,17 +183,16 @@ GEM
     rspec-support (3.8.0)
     rspec-temp_dir (1.1.0)
       rspec (>= 3.0)
-    rubocop (0.67.2)
+    rubocop (0.69.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
-      parser (>= 2.5, != 2.5.1.1)
-      psych (>= 3.1.0)
+      parser (>= 2.6)
       rainbow (>= 2.2.2, < 4.0)
       ruby-progressbar (~> 1.7)
-      unicode-display_width (>= 1.4.0, < 1.6)
-    rubocop-performance (1.1.0)
-      rubocop (>= 0.67.0)
-    rubocop-rspec (1.32.0)
+      unicode-display_width (>= 1.4.0, < 1.7)
+    rubocop-performance (1.3.0)
+      rubocop (>= 0.68.0)
+    rubocop-rspec (1.33.0)
       rubocop (>= 0.60.0)
     ruby-progressbar (1.10.0)
     ruby-rc4 (0.1.5)
@@ -236,7 +240,7 @@ GEM
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.6)
-    unicode-display_width (1.5.0)
+    unicode-display_width (1.6.0)
     webrobots (0.1.2)
 
 PLATFORMS
@@ -253,7 +257,7 @@ DEPENDENCIES
   foreman
   mechanize
   newrelic_rpm
-  onkcop
+  onkcop!
   padrino (>= 0.14.4)
   pdf-reader
   pg (>= 1.0.0)
@@ -271,6 +275,9 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
+
+RUBY VERSION
+   ruby 2.6.3p62
 
 BUNDLED WITH
    1.17.2

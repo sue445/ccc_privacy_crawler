@@ -16,6 +16,12 @@ AllCops:
 Layout/AlignHash:
   EnforcedColonStyle: table
 
+Layout/IndentFirstArrayElement:
+  EnforcedStyle: consistent
+
+Layout/IndentFirstHashElement:
+  EnforcedStyle: consistent
+
 Lint/ScriptPermission:
   Enabled: false
 
