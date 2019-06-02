@@ -222,7 +222,7 @@ GEM
     thor (0.19.4)
     thread_safe (0.3.6)
     tilt (2.0.9)
-    tins (1.20.2)
+    tins (1.20.3)
     ttfunk (1.5.1)
     twitter (6.2.0)
       addressable (~> 2.3)
