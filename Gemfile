@@ -53,9 +53,9 @@ group :development do
   gem "dotenv", group: :test
   gem "foreman"
 
-  # TODO: Remove after https://github.com/onk/onkcop/pull/62 is merged
+  # TODO: Remove after https://github.com/onk/onkcop/pull/62 and https://github.com/onk/onkcop/pull/63 are merged
   # gem "onkcop", ">= 0.53.0.3", require: false
-  gem "onkcop", require: false, github: "sue445/onkcop", branch: "rubocop_0.68.0"
+  gem "onkcop", require: false, github: "sue445/onkcop", branch: "rubocop_0.72.0"
 
   gem "pry-byebug", group: :test
   gem "rubocop-performance", require: false

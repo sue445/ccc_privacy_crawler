@@ -16,6 +16,9 @@ AllCops:
 Layout/AlignHash:
   EnforcedColonStyle: table
 
+Layout/IndentationConsistency:
+    EnforcedStyle: indented_internal_methods
+
 Layout/IndentFirstArrayElement:
   EnforcedStyle: consistent
 
