@@ -91,7 +91,6 @@ GEM
     mini_portile2 (2.4.0)
     minitest (5.11.3)
     moneta (1.0.0)
-    multi_json (1.13.1)
     multipart-post (2.1.1)
     mustermann (1.0.3)
     naught (1.1.0)
@@ -163,8 +162,7 @@ GEM
     rb-fsevent (0.10.3)
     rb-inotify (0.10.0)
       ffi (~> 1.0)
-    rollbar (2.20.2)
-      multi_json
+    rollbar (2.21.0)
     rspec (3.8.0)
       rspec-core (~> 3.8.0)
       rspec-expectations (~> 3.8.0)
