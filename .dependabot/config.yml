@@ -24,7 +24,7 @@ update_configs:
           dependency_type: "production"
           update_type: "semver:patch"
       - match:
-          dependency_name: "rubocop"
+          dependency_name: "rubocop*"
           update_type: "all"
 
     # Enable. Only lockfile updates (ignore updates that require Gemfile changes)
