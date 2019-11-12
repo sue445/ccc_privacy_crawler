@@ -53,7 +53,7 @@ GEM
     equalizer (0.0.11)
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
-    ffi (1.11.1)
+    ffi (1.11.2)
     foreman (0.86.0)
     hashery (2.1.2)
     http (3.3.0)
