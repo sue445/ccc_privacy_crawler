@@ -13,16 +13,16 @@ AllCops:
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
 
-Layout/AlignHash:
+Layout/HashAlignment:
   EnforcedColonStyle: table
 
 Layout/IndentationConsistency:
     EnforcedStyle: indented_internal_methods
 
-Layout/IndentFirstArrayElement:
+Layout/FirstArrayElementIndentation:
   EnforcedStyle: consistent
 
-Layout/IndentFirstHashElement:
+Layout/FirstHashElementIndentation:
   EnforcedStyle: consistent
 
 Lint/ScriptPermission:

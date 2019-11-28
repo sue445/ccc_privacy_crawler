@@ -1,7 +1,7 @@
 GIT
   remote: https://github.com/sue445/onkcop.git
-  revision: 12f80e6cde6074fa8aa3a36c676aa5d679231d8a
-  branch: rubocop_0.72.0
+  revision: 4576d831f4be9a0b049d18f043c9bb9b836031e8
+  branch: develop
   specs:
     onkcop (0.53.0.3)
       rubocop (>= 0.53.0)
@@ -182,7 +182,7 @@ GEM
     rspec-support (3.9.0)
     rspec-temp_dir (1.1.0)
       rspec (>= 3.0)
-    rubocop (0.76.0)
+    rubocop (0.77.0)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
       parser (>= 2.6)
