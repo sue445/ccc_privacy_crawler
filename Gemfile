@@ -32,9 +32,9 @@ gem "rspec", group: "test"
 # Or Padrino Edge
 # gem 'padrino', :github => 'padrino/padrino-framework'
 
+# TODO: Remove my fork after https://github.com/padrino/padrino-framework/pull/2212 is merged
 # gem "padrino", ">= 0.14.4"
 gem "padrino", github: "sue445/padrino-framework", branch: "activerecord_6.0.0"
-# gem "padrino", path: "../../padrino/padrino-framework"
 
 # Or Individual Gems
 # %w(core support gen helpers cache mailer admin).each do |g|
