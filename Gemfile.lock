@@ -9,7 +9,7 @@ GIT
 
 GIT
   remote: https://github.com/sue445/padrino-framework.git
-  revision: 5444214cb8a46387128c0732ad4562954e570c9e
+  revision: 5e4f75c5eade985c6acf8118d25cef000798f3f8
   branch: activerecord_6.0.0
   specs:
     padrino (0.14.4)
