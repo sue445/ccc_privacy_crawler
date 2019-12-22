@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/sue445/onkcop.git
-  revision: 4576d831f4be9a0b049d18f043c9bb9b836031e8
+  revision: ce88a0b298acba6aaed1850e78dcd6f86db9331c
   branch: develop
   specs:
     onkcop (0.53.0.3)
