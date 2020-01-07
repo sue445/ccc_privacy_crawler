@@ -231,7 +231,7 @@ GEM
     tilt (2.0.10)
     tins (1.23.0)
       sync
-    ttfunk (1.6.0)
+    ttfunk (1.6.1)
     twitter (6.2.0)
       addressable (~> 2.3)
       buftok (~> 0.2.0)
