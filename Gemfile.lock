@@ -90,7 +90,7 @@ GEM
     factory_bot (5.1.1)
       activesupport (>= 4.2.0)
     ffi (1.11.3)
-    foreman (0.86.0)
+    foreman (0.87.0)
     hashery (2.1.2)
     http (3.3.0)
       addressable (~> 2.3)
