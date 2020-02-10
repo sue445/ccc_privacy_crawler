@@ -229,7 +229,7 @@ GEM
     thor (0.20.3)
     thread_safe (0.3.6)
     tilt (2.0.10)
-    tins (1.24.0)
+    tins (1.24.1)
       sync
     ttfunk (1.6.1)
     twitter (6.2.0)
