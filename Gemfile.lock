@@ -93,7 +93,7 @@ GEM
     ffi-compiler (1.0.1)
       ffi (>= 1.0.0)
       rake
-    foreman (0.87.0)
+    foreman (0.87.1)
     hashery (2.1.2)
     http (4.4.1)
       addressable (~> 2.3)
