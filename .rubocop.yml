@@ -12,6 +12,7 @@ AllCops:
   TargetRubyVersion: 2.7
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
+  NewCops: enable
 
 Layout/HashAlignment:
   EnforcedColonStyle: table
