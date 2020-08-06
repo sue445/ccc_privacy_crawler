@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-Dir.chdir(File.dirname(__FILE__) + "/..")
+Dir.chdir("#{File.dirname(__FILE__)}/..")
 
 # Start the app with Padrino::Server
 require "rubygems"
