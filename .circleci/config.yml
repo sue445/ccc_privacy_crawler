@@ -3,6 +3,7 @@ version: 2.1
 orbs:
   ruby-orbs: sue445/ruby-orbs@volatile
   heroku:    circleci/heroku@0.0.2
+  slack:     circleci/slack@volatile
 
 executors:
   default:
@@ -28,6 +29,7 @@ jobs:
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
+      - slack/status
 
   rubocop:
     executor:
@@ -38,6 +40,7 @@ jobs:
       - ruby-orbs/bundle-install:
           cache_key_prefix: "v3-bundle"
       - run: bundle exec rubocop
+      - slack/status
 
 workflows:
   version: 2
@@ -54,3 +57,5 @@ workflows:
           filters:
             branches:
               only: master
+          post-deploy:
+            - slack/status
