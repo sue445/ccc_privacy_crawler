@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   ruby-orbs: sue445/ruby-orbs@volatile
-  heroku:    circleci/heroku@0.0.2
+  heroku:    circleci/heroku@volatile
 
 executors:
   default:
