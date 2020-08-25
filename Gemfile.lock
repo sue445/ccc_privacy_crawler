@@ -201,7 +201,7 @@ GEM
       parser (>= 2.7.1.4)
     rubocop-performance (1.7.1)
       rubocop (>= 0.82.0)
-    rubocop-rspec (1.43.1)
+    rubocop-rspec (1.43.2)
       rubocop (~> 0.87)
     rubocop_auto_corrector (0.4.1)
       rubocop (>= 0.87.0)
