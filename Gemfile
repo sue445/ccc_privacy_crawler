@@ -42,7 +42,6 @@ gem "mechanize"
 gem "newrelic_rpm"
 gem "pdf-reader"
 gem "puma"
-gem "puma-heroku"
 gem "rollbar"
 gem "twitter"
 
