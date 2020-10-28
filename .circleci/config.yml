@@ -29,10 +29,8 @@ jobs:
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
-          
+      - slack/status
+
   rubocop:
     executor:
       name: default
@@ -42,10 +40,8 @@ jobs:
       - ruby-orbs/bundle-install:
           cache_key_prefix: "v3-bundle"
       - run: bundle exec rubocop
-      - slack/notify:
-          event: fail
-          template: basic_fail_1
-          
+      - slack/status
+
 workflows:
   version: 2
 
