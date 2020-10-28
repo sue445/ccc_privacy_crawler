@@ -62,6 +62,4 @@ workflows:
             branches:
               only: master
           post-deploy:
-            - slack/notify:
-                event: fail
-                template: basic_fail_1
+            - slack/status
