@@ -1,11 +1,11 @@
 GIT
   remote: https://github.com/sue445/onkcop.git
-  revision: 4f7e76b93efff0b7d4d7d9058a487d435479b129
+  revision: d09f75a5eeb1969800cca160f653325771590fae
   branch: develop
   specs:
     onkcop (0.53.0.3)
       rubocop (>= 0.53.0)
-      rubocop-rspec (>= 1.24.0)
+      rubocop-rspec (>= 1.34.0)
 
 GEM
   remote: https://rubygems.org/
