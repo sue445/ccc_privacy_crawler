@@ -54,7 +54,7 @@ end
 ##
 # Add your after (RE)load hooks here
 #
-Padrino.after_load do
-end
+# Padrino.after_load do
+# end
 
 Padrino.load!
