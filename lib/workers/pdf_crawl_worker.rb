@@ -24,7 +24,7 @@ class PdfCrawlWorker
     agent = Mechanize.new
     agent.get(Company::LIST_PDF_URL)
 
-    download_link = agent.page.link_with(href: %r{/attachment_file/.+\.pdf})
+    download_link = agent.page.link_with(href: %r{^/usr/file/attachment/.+\.pdf})
     raise "Not found download_link" unless download_link
 
     pdf_content = agent.get_file(download_link.href)

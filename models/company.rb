@@ -16,7 +16,7 @@
 #
 
 class Company < ActiveRecord::Base
-  LIST_PDF_URL = "http://qa.tsite.jp/faq/show/25129".freeze
+  LIST_PDF_URL = "https://ssl.help.tsite.jp/faq/show/43526?category_id=4281&site_domain=qa-tsite".freeze
 
   def self.import_new_companies(companies)
     new_companies = []
