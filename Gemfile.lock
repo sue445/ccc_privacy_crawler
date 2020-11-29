@@ -256,7 +256,7 @@ GEM
     unf_ext (0.0.7.7)
     unicode-display_width (1.7.0)
     webrobots (0.1.2)
-    zeitwerk (2.4.1)
+    zeitwerk (2.4.2)
 
 PLATFORMS
   ruby
