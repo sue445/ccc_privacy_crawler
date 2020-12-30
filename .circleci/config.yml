@@ -8,7 +8,7 @@ orbs:
 executors:
   default:
     docker:
-      - image: circleci/ruby:2.7.2
+      - image: circleci/ruby:3.0.0
         environment:
           RACK_ENV: test
       - image: circleci/postgres:9.4-alpine-ram
