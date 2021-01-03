@@ -1,12 +1,3 @@
-GIT
-  remote: https://github.com/sue445/onkcop.git
-  revision: d09f75a5eeb1969800cca160f653325771590fae
-  branch: develop
-  specs:
-    onkcop (0.53.0.3)
-      rubocop (>= 0.53.0)
-      rubocop-rspec (>= 1.34.0)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -106,6 +97,9 @@ GEM
       mini_portile2 (~> 2.5.0)
       racc (~> 1.4)
     ntlm-http (0.1.1)
+    onkcop (1.0.0.0)
+      rubocop (>= 0.80.0)
+      rubocop-rspec (>= 1.34.0)
     padrino (0.15.0)
       padrino-admin (= 0.15.0)
       padrino-cache (= 0.15.0)
@@ -275,7 +269,7 @@ DEPENDENCIES
   mechanize
   newrelic_rpm
   nokogiri (>= 1.11.0.rc4)
-  onkcop!
+  onkcop (>= 1.0.0.0)
   padrino (>= 0.15.0)
   pdf-reader
   pg (>= 1.0.0)

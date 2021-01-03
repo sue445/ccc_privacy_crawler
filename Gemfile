@@ -50,14 +50,7 @@ group :development do
   gem "annotate"
   gem "dotenv", group: :test
   gem "foreman"
-
-  # TODO: Remove after following PR are merged
-  # * https://github.com/onk/onkcop/pull/62
-  # * https://github.com/onk/onkcop/pull/63
-  # * https://github.com/onk/onkcop/pull/65
-  # gem "onkcop", ">= 0.53.0.3", require: false
-  gem "onkcop", require: false, github: "sue445/onkcop", branch: "develop"
-
+  gem "onkcop", ">= 1.0.0.0", require: false
   gem "pry-byebug", group: :test
   gem "rubocop_auto_corrector", require: false
   gem "rubocop-performance", require: false
