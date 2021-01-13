@@ -2,7 +2,7 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby "2.7.2"
+ruby "3.0.0"
 
 # Distribute your app as a gem
 # gemspec
@@ -45,6 +45,7 @@ gem "pdf-reader"
 gem "puma"
 gem "rollbar"
 gem "twitter"
+gem "webrick" # TOOD: Remove this after https://github.com/sparklemotion/mechanize/pull/556 is merged
 
 group :development do
   gem "annotate"

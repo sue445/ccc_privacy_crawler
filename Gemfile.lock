@@ -253,6 +253,7 @@ GEM
       unf_ext
     unf_ext (0.0.7.7)
     unicode-display_width (2.0.0)
+    webrick (1.7.0)
     webrobots (0.1.2)
     zeitwerk (2.4.2)
 
@@ -291,9 +292,10 @@ DEPENDENCIES
   slim
   sqlite3
   twitter
+  webrick
 
 RUBY VERSION
-   ruby 2.7.2p137
+   ruby 3.0.0p0
 
 BUNDLED WITH
-   2.1.4
+   2.2.3
