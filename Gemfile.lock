@@ -133,7 +133,7 @@ GEM
       padrino-core (= 0.15.0)
     padrino-support (0.15.0)
     parallel (1.20.1)
-    parser (3.0.0.0)
+    parser (3.0.1.0)
       ast (~> 2.4.1)
     pdf-reader (2.4.2)
       Ascii85 (~> 1.0)
