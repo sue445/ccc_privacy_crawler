@@ -9,10 +9,3 @@ updates:
   assignees:
   - sue445
   versioning-strategy: lockfile-only
-  ignore:
-  - dependency-name: nio4r
-    versions:
-    - 2.5.5
-  - dependency-name: rspec-support
-    versions:
-    - 3.10.2
