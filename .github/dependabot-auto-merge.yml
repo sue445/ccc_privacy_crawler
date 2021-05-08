@@ -1,0 +1,18 @@
+- match:
+    dependency_type: "development"
+    update_type: "all"
+- match:
+    dependency_type: "production"
+    update_type: "semver:patch"
+- match:
+    dependency_name: "rubocop*"
+    update_type: "all"
+- match:
+    dependency_name: "minitest"
+    update_type: "all"
+- match:
+    dependency_name: "parser"
+    update_type: "all"
+- match:
+    dependency_name: "pry"
+    update_type: "all"
