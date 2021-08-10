@@ -95,7 +95,7 @@ GEM
       connection_pool (~> 2.2)
     newrelic_rpm (7.2.0)
     nio4r (2.5.7)
-    nokogiri (1.12.2)
+    nokogiri (1.12.3)
       mini_portile2 (~> 2.6.1)
       racc (~> 1.4)
     onkcop (1.0.0.0)
