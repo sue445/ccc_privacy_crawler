@@ -8,14 +8,22 @@ orbs:
 executors:
   default:
     docker:
-      - image: circleci/ruby:3.0.1
+      - image: cimg/ruby:3.0.1
         environment:
           RACK_ENV: test
-      - image: circleci/postgres:9.4-alpine-ram
+      - image: cimg/postgres:9.6
         environment:
           POSTGRES_USER: ubuntu
           POSTGRES_DB: circle_test
     working_directory: ~/app
+
+commands:
+  bundle_install:
+    steps:
+      - run: sudo apt-get update
+      - run: sudo apt-get install -y libsqlite3-dev
+      - ruby-orbs/bundle-install:
+          cache_key_prefix: "v3-bundle"
 
 jobs:
   rspec:
@@ -24,8 +32,7 @@ jobs:
 
     steps:
       - checkout
-      - ruby-orbs/bundle-install:
-          cache_key_prefix: "v3-bundle"
+      - bundle_install
       - run: cp .circleci/database.yml config/database.yml
       - run: bundle exec rake ar:migrate:reset
       - run: bundle exec rspec
@@ -37,8 +44,7 @@ jobs:
 
     steps:
       - checkout
-      - ruby-orbs/bundle-install:
-          cache_key_prefix: "v3-bundle"
+      - bundle_install
       - run: bundle exec rubocop
       - slack/notify-on-failure
 
