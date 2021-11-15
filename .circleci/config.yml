@@ -8,7 +8,7 @@ orbs:
 executors:
   default:
     docker:
-      - image: cimg/ruby:3.0.1
+      - image: cimg/ruby:3.0.2
         environment:
           RACK_ENV: test
       - image: cimg/postgres:9.6
