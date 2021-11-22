@@ -7,7 +7,7 @@ GEM
     activerecord (6.1.4.1)
       activemodel (= 6.1.4.1)
       activesupport (= 6.1.4.1)
-    activerecord-simple_index_name (1.0.0)
+    activerecord-simple_index_name (1.0.1)
       activerecord (>= 5.0.0)
       activesupport (>= 5.0.0)
     activesupport (6.1.4.1)
@@ -60,7 +60,7 @@ GEM
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
     http_parser.rb (0.6.0)
-    i18n (1.8.10)
+    i18n (1.8.11)
       concurrent-ruby (~> 1.0)
     json (2.5.1)
     mail (2.7.1)
@@ -256,7 +256,7 @@ GEM
     unicode-display_width (2.1.0)
     webrick (1.7.0)
     webrobots (0.1.2)
-    zeitwerk (2.4.2)
+    zeitwerk (2.5.1)
 
 PLATFORMS
   ruby
