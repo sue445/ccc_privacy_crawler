@@ -11,7 +11,7 @@ executors:
       - image: cimg/ruby:3.0.2
         environment:
           RACK_ENV: test
-      - image: cimg/postgres:9.6
+      - image: circleci/postgres:9.4-alpine-ram
         environment:
           POSTGRES_USER: ubuntu
           POSTGRES_DB: circle_test
