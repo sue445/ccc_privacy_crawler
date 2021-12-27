@@ -28,9 +28,7 @@ class PdfCrawlWorker
     raise "Not found download_link" unless download_link
 
     pdf_content = agent.get_file(download_link.href)
-    File.open(dest_pdf_file, "wb") do |file|
-      file.write(pdf_content)
-    end
+    File.binwrite(dest_pdf_file, pdf_content)
   end
 
   def parse_ccc_pdf(pdf_file)
