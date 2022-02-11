@@ -19,8 +19,8 @@ GEM
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
     afm (0.2.2)
-    annotate (3.1.1)
-      activerecord (>= 3.2, < 7.0)
+    annotate (3.2.0)
+      activerecord (>= 3.2, < 8.0)
       rake (>= 10.4, < 14.0)
     ast (2.4.2)
     buftok (0.2.0)
@@ -60,7 +60,7 @@ GEM
     http-parser (1.2.3)
       ffi-compiler (>= 1.0, < 2.0)
     http_parser.rb (0.6.0)
-    i18n (1.8.11)
+    i18n (1.9.1)
       concurrent-ruby (~> 1.0)
     json (2.5.1)
     mail (2.7.1)
@@ -256,7 +256,7 @@ GEM
     unicode-display_width (2.1.0)
     webrick (1.7.0)
     webrobots (0.1.2)
-    zeitwerk (2.5.1)
+    zeitwerk (2.5.4)
 
 PLATFORMS
   ruby
