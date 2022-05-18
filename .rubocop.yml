@@ -35,3 +35,6 @@ Lint/ScriptPermission:
 Naming/FileName:
   Exclude:
     - lib/pdf-reader.rb
+
+Style/FetchEnvVar:
+  Enabled: false
