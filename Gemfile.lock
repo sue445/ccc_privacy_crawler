@@ -226,7 +226,7 @@ GEM
     slim (4.1.0)
       temple (>= 0.7.6, < 0.9)
       tilt (>= 2.0.6, < 2.1)
-    sqlite3 (1.4.3)
+    sqlite3 (1.4.4)
     sync (0.5.0)
     temple (0.8.2)
     term-ansicolor (1.7.1)
