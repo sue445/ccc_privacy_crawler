@@ -29,7 +29,7 @@ RSpec.describe PdfCrawlWorker do
 
     let(:pdf_file) { "#{spec_dir}/data/ccc_privacy_present_companies_20220701.pdf" }
 
-    its(:count) { should eq 81 }
-    it { should all(be_a_company(receipted_date: "2014/10/20")) }
+    its(:count) { should eq 118 }
+    its([0])    { should be_a_company(receipted_date: "2014/10/20") }
   end
 end
