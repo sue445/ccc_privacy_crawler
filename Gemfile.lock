@@ -1,3 +1,15 @@
+GIT
+  remote: https://github.com/yob/pdf-reader.git
+  revision: aacc768d210dc9f1b444e7440dd1305924805e89
+  ref: aacc768
+  specs:
+    pdf-reader (2.10.0)
+      Ascii85 (~> 1.0)
+      afm (~> 0.2.1)
+      hashery (~> 2.0)
+      ruby-rc4
+      ttfunk
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -135,12 +147,6 @@ GEM
     parallel (1.22.1)
     parser (3.1.2.0)
       ast (~> 2.4.1)
-    pdf-reader (2.10.0)
-      Ascii85 (~> 1.0)
-      afm (~> 0.2.1)
-      hashery (~> 2.0)
-      ruby-rc4
-      ttfunk
     pg (1.4.1)
     pry (0.13.1)
       coderay (~> 1.1)
@@ -275,7 +281,7 @@ DEPENDENCIES
   nokogiri (>= 1.11.0.rc4)
   onkcop (>= 1.0.0.0)
   padrino (>= 0.15.0)
-  pdf-reader
+  pdf-reader!
   pg (>= 1.0.0)
   pry-byebug
   puma
