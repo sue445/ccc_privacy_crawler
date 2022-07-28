@@ -12,7 +12,7 @@ inherit_gem:
     - "config/performance.yml"
 
 AllCops:
-  TargetRubyVersion: 3.0
+  TargetRubyVersion: 3.1
   # uncomment if use rails cops
   # TargetRailsVersion: 5.1
   NewCops: enable
