@@ -18,7 +18,7 @@ ruby "3.0.4"
 gem "rake"
 
 # Component requirements
-gem "activerecord", ">= 5.2.0", require: "active_record"
+gem "activerecord", "< 7.0.0", require: "active_record" # FIXME: padrino doesn't work with activerecord v7+
 gem "sass"
 gem "slim"
 

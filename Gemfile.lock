@@ -269,7 +269,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  activerecord (>= 5.2.0)
+  activerecord (< 7.0.0)
   activerecord-simple_index_name
   annotate
   coveralls
@@ -306,4 +306,4 @@ RUBY VERSION
    ruby 3.0.4p208
 
 BUNDLED WITH
-   2.2.32
+   2.2.33
