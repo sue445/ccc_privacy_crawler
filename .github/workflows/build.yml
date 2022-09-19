@@ -127,5 +127,3 @@ jobs:
           deliverables: app.yaml # cron.yaml # TODO: Do after
 
       - run: bundle exec rake appengine:exec -- ./appengine/exec.sh rake ar:migrate
-        env:
-          RACK_ENV: production

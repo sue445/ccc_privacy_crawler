@@ -1,6 +1,11 @@
 require "bundler/setup"
 require "padrino-core/cli/rake"
 
+begin
+  require "appengine/tasks"
+rescue LoadError # rubocop:disable Lint/SuppressedException
+end
+
 PadrinoTasks.use(:database)
 PadrinoTasks.use(:activerecord)
 PadrinoTasks.init
