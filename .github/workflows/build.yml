@@ -41,6 +41,10 @@ jobs:
         env:
           RACK_ENV: test
           POSTGRESQL_PORT: ${{ job.services.postgresql.ports['5432'] }}
+          TWITTER_ACCESS_TOKEN: ${{ secrets.TWITTER_ACCESS_TOKEN }}
+          TWITTER_ACCESS_TOKEN_SECRET: ${{ secrets.TWITTER_ACCESS_TOKEN_SECRET }}
+          TWITTER_CONSUMER_KEY: ${{ secrets.TWITTER_CONSUMER_KEY }}
+          TWITTER_CONSUMER_SECRET: ${{ secrets.TWITTER_CONSUMER_SECRET }}
 
       - name: Slack Notification (not success)
         uses: lazy-actions/slatify@master
