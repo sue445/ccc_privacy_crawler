@@ -80,3 +80,42 @@ jobs:
           icon_emoji: ":octocat:"
           url: ${{ secrets.SLACK_WEBHOOK }}
           token: ${{ secrets.GITHUB_TOKEN }}
+
+  deploy:
+    needs:
+      - test
+
+    if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/deploy/')) }}
+
+    runs-on: ubuntu-latest
+
+    environment: production
+    concurrency: production
+
+    permissions:
+      contents: read
+      id-token: write
+
+    env:
+      WORKLOAD_IDENTITY_PROVIDER: "projects/952661857570/locations/global/workloadIdentityPools/ccc-privacy-crawler/providers/github-actions"
+      SERVICE_ACCOUNT_EMAIL: "deployer@ccc-privacy-crawler.iam.gserviceaccount.com"
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - id: auth
+        name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v0
+        with:
+          workload_identity_provider: ${{ env.WORKLOAD_IDENTITY_PROVIDER }}
+          service_account: ${{ env.SERVICE_ACCOUNT_EMAIL }}
+
+      - run: ./.github/workflows/prepare_app_yaml.sh
+        env:
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
+          SENTRY_DSN: ${{ secrets.SENTRY_DSN }}
+
+      - id: deploy
+        uses: google-github-actions/deploy-appengine@v0
+        with:
+          deliverables: app.yaml # cron.yaml # TODO: Do after
