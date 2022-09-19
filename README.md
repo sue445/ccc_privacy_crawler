@@ -5,7 +5,8 @@ Tカードの [個人情報提供の停止 対象企業一覧](https://ssl.help.
 * Twilog: http://twilog.org/ccc_privacy_bot
 * webアプリ: https://ccc-privacy-crawler.herokuapp.com/
 
-[![Circle CI](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master.png?style=badge)](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/master)
+[![build](https://github.com/sue445/ccc_privacy_crawler/actions/workflows/build.yml/badge.svg)](https://github.com/sue445/ccc_privacy_crawler/actions/workflows/build.yml)
+[![Circle CI](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/heroku.png?style=badge)](https://circleci.com/gh/sue445/ccc_privacy_crawler/tree/heroku)
 [![Code Climate](https://codeclimate.com/github/sue445/ccc_privacy_crawler/badges/gpa.svg)](https://codeclimate.com/github/sue445/ccc_privacy_crawler)
 [![Coverage Status](https://img.shields.io/coveralls/sue445/ccc_privacy_crawler.svg)](https://coveralls.io/r/sue445/ccc_privacy_crawler)
 

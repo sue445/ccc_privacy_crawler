@@ -1,67 +1,22 @@
 version: 2.1
 
-orbs:
-  ruby-orbs: sue445/ruby-orbs@volatile
-  heroku:    circleci/heroku@volatile
-  slack:     circleci/slack@3
-
 executors:
   default:
     docker:
-      - image: cimg/ruby:3.1.2
-        environment:
-          RACK_ENV: test
-      - image: circleci/postgres:9.4-alpine-ram
-        environment:
-          POSTGRES_USER: ubuntu
-          POSTGRES_DB: circle_test
+      - image: alpine
     working_directory: ~/app
 
-commands:
-  bundle_install:
-    steps:
-      - run: sudo apt-get update
-      - run: sudo apt-get install -y libsqlite3-dev
-      - ruby-orbs/bundle-install:
-          cache_key_prefix: "v3-bundle"
-
 jobs:
-  rspec:
+  dummy:
     executor:
       name: default
 
     steps:
-      - checkout
-      - bundle_install
-      - run: cp .circleci/database.yml config/database.yml
-      - run: bundle exec rake ar:migrate:reset
-      - run: bundle exec rspec
-      - slack/notify-on-failure
-
-  rubocop:
-    executor:
-      name: default
-
-    steps:
-      - checkout
-      - bundle_install
-      - run: bundle exec rubocop
-      - slack/notify-on-failure
+      - run: date
 
 workflows:
   version: 2
 
-  build-and-deploy:
+  dummy:
     jobs:
-      - rspec
-      - rubocop
-      - heroku/deploy-via-git:
-          context: Heroku
-          requires:
-            - rspec
-            - rubocop
-          filters:
-            branches:
-              only: master
-          post-deploy:
-            - slack/status
+      - dummy

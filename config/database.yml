@@ -2,9 +2,18 @@ development:
   adapter: sqlite3
   database: db/gemoire_development.db
 
+postgresql: &postgresql
+  adapter: postgresql
+  encoding: unicode
+  pool: <%= ENV.fetch("MAX_THREADS") { 5 } %>
+
 test:
-  adapter: sqlite3
-  database: db/gemoire_test.db
+  <<: *postgresql
+  database: ccc_privacy_crawler_test
+  username: postgres
+  password: postgres
+  port: <%= ENV.fetch("POSTGRESQL_PORT") { 5432 } %>
+  host: localhost
 
 production:
   adapter: postgresql

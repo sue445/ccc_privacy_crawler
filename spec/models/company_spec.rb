@@ -41,7 +41,7 @@ RSpec.describe Company do
     end
   end
 
-  describe "#notify_to_twitter" do
+  describe "#notify_to_twitter", if: ENV["TWITTER_ACCESS_TOKEN"] do
     let(:company) { create(:company) }
 
     it { expect { company.notify_to_twitter }.not_to raise_error }
