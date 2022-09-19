@@ -63,14 +63,5 @@ module CccPrivacyCrawler
     #     render 'errors/500'
     #   end
     #
-
-    if ENV["ROLLBAR_ACCESS_TOKEN"].present? && Padrino.env == :production
-      require "rollbar/middleware/sinatra"
-      Rollbar.configure do |config|
-        config.access_token = ENV["ROLLBAR_ACCESS_TOKEN"]
-      end
-
-      use Rollbar::Middleware::Sinatra
-    end
   end
 end
