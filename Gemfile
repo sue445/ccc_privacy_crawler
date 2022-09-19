@@ -20,6 +20,7 @@ gem "pdf-reader", github: "yob/pdf-reader", ref: "aacc768"
 gem "pg", ">= 1.0.0"
 gem "puma", require: false
 gem "sass"
+gem "sentry-ruby"
 gem "slim"
 gem "twitter"
 
