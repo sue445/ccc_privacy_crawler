@@ -13,6 +13,3 @@
 - match:
     dependency_name: "parser"
     update_type: "all"
-- match:
-    dependency_name: "pry"
-    update_type: "all"
