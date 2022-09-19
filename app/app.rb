@@ -52,6 +52,12 @@ module CccPrivacyCrawler
     #   end
     #
 
+    configure do
+      Sentry.init do |config|
+        config.enabled_environments = %w[production]
+      end
+    end
+
     ##
     # You can manage errors like:
     #
