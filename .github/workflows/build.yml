@@ -84,6 +84,7 @@ jobs:
   deploy:
     needs:
       - test
+      - rubocop
 
     if: ${{ github.event_name == 'push' && (github.ref == 'refs/heads/main' || startsWith(github.ref, 'refs/heads/deploy/')) }}
 
