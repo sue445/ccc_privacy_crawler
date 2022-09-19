@@ -45,3 +45,10 @@ group :test do
   gem "rspec-its"
   gem "rspec-temp_dir"
 end
+
+group :production do
+  gem "appengine"
+
+  # c.f. https://github.com/GoogleCloudPlatform/serverless-exec-ruby/pull/20
+  gem "google-serverless-exec", github: "sue445/serverless-exec-ruby", branch: "ruby_3.0"
+end
