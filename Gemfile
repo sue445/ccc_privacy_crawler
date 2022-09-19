@@ -40,7 +40,6 @@ gem "padrino", ">= 0.15.0"
 
 gem "activerecord-simple_index_name"
 gem "mechanize"
-gem "newrelic_rpm"
 gem "nokogiri", ">= 1.11.0.rc4"
 
 # FIXME: Use gemified pdf-reader if 2.10.0+ is released
@@ -49,7 +48,6 @@ gem "nokogiri", ">= 1.11.0.rc4"
 gem "pdf-reader", github: "yob/pdf-reader", ref: "aacc768"
 
 gem "puma"
-gem "rollbar"
 gem "twitter"
 gem "webrick" # TOOD: Remove this after https://github.com/sparklemotion/mechanize/pull/556 is merged
 

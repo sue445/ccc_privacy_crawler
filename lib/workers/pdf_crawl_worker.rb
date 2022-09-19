@@ -14,10 +14,6 @@ class PdfCrawlWorker
       new_companies.each(&:notify_to_twitter)
       Padrino.logger.info "Add #{new_companies.count} companies"
     end
-  rescue => e
-    # TODO: Remove after
-    Rollbar.error(e)
-    raise
   end
 
   def download_ccc_pdf(dest_pdf_file)
