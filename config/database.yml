@@ -16,7 +16,5 @@ test:
   host: localhost
 
 production:
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  <<: *postgresql
   url: <%= ENV['DATABASE_URL'] %>

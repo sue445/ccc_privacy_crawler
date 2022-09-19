@@ -1,0 +1,6 @@
+.circleci/
+.github/
+log/
+spec/
+tmp/
+vendor/bundle/
