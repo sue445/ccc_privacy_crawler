@@ -1,10 +1,5 @@
 #!/bin/bash -xe
 
-export DATABASE_URL=gcp:///DATABASE_URL
-export SENTRY_DSN=gcp:///SENTRY_DSN
-export TWITTER_ACCESS_TOKEN=gcp:///TWITTER_ACCESS_TOKEN
-export TWITTER_ACCESS_TOKEN_SECRET=gcp:///TWITTER_ACCESS_TOKEN_SECRET
-export TWITTER_CONSUMER_KEY=gcp:///TWITTER_CONSUMER_KEY
-export TWITTER_CONSUMER_SECRET=gcp:///TWITTER_CONSUMER_SECRET
+source ./appengine/secrets.sh
 
 ./appengine/gcp-get-secret bundle exec puma -C config/puma.rb
