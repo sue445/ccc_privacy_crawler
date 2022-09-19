@@ -2,7 +2,8 @@ source "https://rubygems.org"
 
 git_source(:github) {|repo| "https://github.com/#{repo}.git" }
 
-ruby "3.1.2"
+# c.f. https://cloud.google.com/appengine/docs/standard/ruby/runtime
+ruby "~> 3.0.0"
 
 # Distribute your app as a gem
 # gemspec
