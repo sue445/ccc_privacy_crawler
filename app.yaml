@@ -39,9 +39,6 @@ env_variables:
   MAX_THREADS: 8
   SENTRY_RELEASE: __GITHUB_SHA__
 
-build_env_variables:
-  RACK_ENV: production
-
 instance_class: F1
 
 automatic_scaling:
